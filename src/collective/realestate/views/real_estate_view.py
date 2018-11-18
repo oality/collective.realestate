@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-
 from collective.realestate import _
 from Products.Five.browser import BrowserView
+
+
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 

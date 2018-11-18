@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from collective.realestate.testing import COLLECTIVE_REALESTATE_FUNCTIONAL_TESTING
-from collective.realestate.testing import COLLECTIVE_REALESTATE_INTEGRATION_TESTING
+from collective.realestate.testing import COLLECTIVE_REALESTATE_FUNCTIONAL_TESTING  # noqa
+from collective.realestate.testing import COLLECTIVE_REALESTATE_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
