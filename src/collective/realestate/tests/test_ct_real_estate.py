@@ -12,8 +12,6 @@ from zope.component import queryUtility
 import unittest
 
 
-
-
 class RealEstateIntegrationTest(unittest.TestCase):
 
     layer = COLLECTIVE_REALESTATE_INTEGRATION_TESTING
