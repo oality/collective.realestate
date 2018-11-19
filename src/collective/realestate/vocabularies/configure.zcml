@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.realestate">
+
+    <!-- -*- extra stuff goes here -*- -->
+
+    <utility
+        component=".string_numbers.StringNumbersFactory"
+        name="collective.realestate.StringNumbers"
+    />
+
+        
+</configure>
