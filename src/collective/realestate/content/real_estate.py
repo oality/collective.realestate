@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collective.realestate import _
 # from plone.app.textfield import RichText
 # from plone.autoform import directives
 from plone.dexterity.content import Container
@@ -6,11 +7,8 @@ from plone.dexterity.content import Container
 from plone.supermodel import model
 # from plone.supermodel.directives import fieldset
 # from z3c.form.browser.radio import RadioFieldWidget
-# from zope import schema
+from zope import schema
 from zope.interface import implementer
-
-
-# from collective.realestate import _
 
 
 class IRealEstate(model.Schema):
@@ -32,6 +30,16 @@ class IRealEstate(model.Schema):
     #     title=_(u'Text'),
     #     required=False
     # )
+
+    persons = schema.Int(
+        title=_(u'Number of peron(s)'),
+        required=False
+    )
+
+    rooms = schema.Int(
+        title=_(u'Number of bedroom(s)'),
+        required=False
+    )
 
     # url = schema.URI(
     #     title=_(u'Link'),

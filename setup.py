@@ -15,7 +15,7 @@ long_description = '\n\n'.join([
 setup(
     name='collective.realestate',
     version='1.0a1',
-    description="Make a sale and rental real estate website",
+    description='Make a sale and rental real estate website',
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -45,6 +45,8 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',
+        'eea.facetednavigation',
+        'collective.dexteritytextindexer',
     ],
     extras_require={
         'test': [
