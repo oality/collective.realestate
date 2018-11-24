@@ -51,6 +51,7 @@
     <!--<element value="plone.app.contenttypes.behaviors.tableofcontents.ITableOfContents"/>-->
     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
+    <element value="collective.behavior.gallery.behaviors.folderish_gallery.IFolderishGallery" />
   </property>
 
   <!-- View information -->

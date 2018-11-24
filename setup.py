@@ -47,6 +47,7 @@ setup(
         'z3c.jbot',
         'eea.facetednavigation',
         'collective.dexteritytextindexer',
+        'collective.behavior.gallery',
     ],
     extras_require={
         'test': [

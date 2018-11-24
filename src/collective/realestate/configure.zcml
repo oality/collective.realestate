@@ -13,12 +13,12 @@
   -->
   <!--<includeDependencies package="." />-->
 
-  <include package=".views" />
 
   <include package=".browser" />
+  <include package=".faceted" />
+  <include package=".vocabularies" />
 
   <include file="permissions.zcml" />
-
   <include file="upgrades.zcml" />
 
   <genericsetup:registerProfile
@@ -46,7 +46,6 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-    <include package=".vocabularies" />
 
-        
+
 </configure>

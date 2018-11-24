@@ -1,0 +1,29 @@
+.faceted-intselect-item-disabled {
+  color: gray;
+}
+
+.faceted-zero-count-hidden .faceted-intselect-item-disabled {
+  display: none;
+}
+
+.faceted-intselect-widget label.intselect-field {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.faceted-widget {
+  float: left;
+}
+
+#faceted-form fieldset {
+  border-color: white;
+  border-width: 0px;
+}
+
+.widget-fieldset legend {
+  display: none;
+}
