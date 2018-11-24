@@ -9,7 +9,7 @@
       <faceted:widget factory="eea.facetednavigation.widgets.daterange.widget.Widget" />
     </unconfigure-->
 
-    <!--include package=".views" /-->
+    <include package=".views" />
     <include package=".widgets" />
 
 </configure>

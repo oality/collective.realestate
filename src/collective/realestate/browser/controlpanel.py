@@ -2,7 +2,6 @@
 from collective.realestate import _
 from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 from plone.app.registry.browser.controlpanel import RegistryEditForm
-from plone.schema.email import Email
 from plone.z3cform import layout
 from zope import schema as zopeschema
 from zope.interface import Interface
@@ -22,7 +21,7 @@ class RealEstateSettingsEditForm(RegistryEditForm):
     Define form logic
     """
     schema = IRealEstateSettings
-    schema_prefix = "collective.realestate"
+    schema_prefix = 'collective.realestate'
     label = _(u'Real Estate settings')
 
 

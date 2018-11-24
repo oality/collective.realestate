@@ -1,0 +1,37 @@
+<div class="photoAlbumEntry"
+  tal:define="portal_type context/portal_type|string:;
+              useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings|python:[];
+              useView python:portal_type in useViewTypes;">
+  <a tal:define="
+      description context/Description|string:;
+      title context/pretty_title_or_id|string:;
+      rooms context/rooms|string:;
+      desc_or_title python:description or title;
+      url context/absolute_url|string:#;
+      view_url python:(url and useView and url + '/view') or url;
+      is_namedimage python:getattr(getattr(context, 'image', None), 'getImageSize', None) is not None;
+      image_thumb exists:context/image_thumb;
+      image_tag python:getattr(context, 'tag', None)"
+     tal:attributes="href view_url;
+                     title description">
+
+<tal:block tal:condition="is_namedimage">
+    <span class="photoAlbumEntryWrapper">
+
+       <img style="border: none" tal:attributes="
+        title desc_or_title;
+        alt title;
+        src string:$url/@@images/image/thumb"/>
+    </span>
+
+    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
+    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+    <div class="realestate-rooms">
+      <span i18n:translate="Rooms:">Chambres :</span>
+      <span  tal:content="rooms">Rooms</span>
+    </div>
+
+</tal:block>
+
+  </a>
+</div>

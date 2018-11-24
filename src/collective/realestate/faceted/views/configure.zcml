@@ -1,0 +1,21 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:faceted="http://namespaces.zope.org/faceted"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="collective.realestate">
+
+  <faceted:view
+      name="faceted-realestate-items"
+      template="realestate-items.pt"
+      title="Faceted items realestate"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      name="faceted-realestate-item"
+      for="zope.interface.Interface"
+      template="realestate-item.pt"
+      permission="zope2.View"
+  />
+
+</configure>
