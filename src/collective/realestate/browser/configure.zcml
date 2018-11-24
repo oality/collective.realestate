@@ -1,21 +1,55 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="collective.realestate">
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  i18n_domain="collective.realestate">
+
+  <include package="Products.CMFCore" file="permissions.zcml" />
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
   <browser:jbot
-      directory="overrides"
-      layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
-      />
+    directory="overrides"
+    layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
+    />
 
   <!-- Publish static files -->
   <plone:static
-      name="collective.realestate"
-      type="plone"
-      directory="static"
-      />
+    name="collective.realestate"
+    type="plone"
+    directory="static"
+    />
+
+  <browser:page
+    name="reservation-request"
+    for="collective.realestate.content.real_estate.IRealEstate"
+    permission="zope2.View"
+    class=".form.ReservationRequestForm"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <browser:page
+    name="real-estate-view"
+    for="Products.CMFCore.interfaces.IFolderish"
+    class=".real_estate_view.RealEstateView"
+    template="real_estate_view.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <browser:page
+    for="*"
+    name="request-reservation-email"
+    template="request-reservation-email.pt"
+    permission="zope.Public"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <browser:page
+    name="realestate-settings"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.RealEstateSettingsView"
+    permission="cmf.ManagePortal"
+    />
 
 </configure>

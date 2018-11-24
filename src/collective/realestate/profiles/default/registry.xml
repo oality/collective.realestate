@@ -1,5 +1,32 @@
 <?xml version="1.0"?>
 <registry>
-<!-- -*- extra stuff goes here -*- -->
+  <!-- -*- extra stuff goes here -*- -->
+  <!-- select widget -->
+  <records prefix="plone.resources/faceted-widgets-intselect-view" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.realestate.faceted.widgets.intselect.view.css</element>
+    </value>
+    <value key="js">++resource++collective.realestate.faceted.widgets.intselect.view.js</value>
+  </records>
 
+  <records prefix="plone.resources/faceted-widgets-select-edit" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.realestate.faceted.widgets.intselect.edit.css</element>
+    </value>
+    <value key="js">++resource++collective.realestate.faceted.widgets.intselect.edit.js</value>
+  </records>
+
+  <records prefix="plone.bundles/realestate-faceted-view" interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>faceted-widgets-intselect-view</element>
+    </value>
+    <value key="depends">faceted-jquery</value>
+    <value key="csscompilation">++plone++static/realestate-faceted-view.min.css</value>
+    <value key="jscompilation">++plone++static/realestate-faceted-view.min.js</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+  </records>
+
+  <records interface="collective.realestate.browser.controlpanel.IRealEstateSettings" prefix="collective.realestate">
+  </records>
 </registry>
