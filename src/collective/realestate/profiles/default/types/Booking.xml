@@ -1,35 +1,30 @@
 <?xml version="1.0"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    name="Real estate"
+    name="Booking"
     meta_type="Dexterity FTI"
     i18n:domain="collective.realestate">
 
   <!-- Basic properties -->
   <property
-      i18n:translate="Real estate"
-      name="title">Real estate</property>
+      i18n:translate=""
+      name="title">Booking</property>
   <property
       i18n:translate=""
-      name="description"></property>
+      name="description">Add booking date</property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">Real estate</property>
+  <property name="factory">Booking</property>
   <property name="icon_expr"></property>
   <property name="link_target"></property>
 
   <!-- Hierarchy control -->
-  <property name="global_allow">True</property>
-  <property name="filter_content_types">True</property>
-  <property name="allowed_content_types">
-    <element value="Booking" />
-        <element value="Image"/>
-  </property>
+  <property name="global_allow">False</property>
   <!-- Schema, class and security -->
-  <property name="add_permission">collective.realestate.AddRealEstate</property>
-  <property name="klass">collective.realestate.content.real_estate.RealEstate</property>
-  <property name="model_file"></property>
+  <property name="add_permission">collective.realestate.AddBooking</property>
+  <property name="klass">collective.realestate.content.booking.Booking</property>
+  <property name="model_file">collective.realestate.content:booking.xml</property>
   <property name="model_source"></property>
-  <property name="schema">collective.realestate.content.real_estate.IRealEstate</property>
+  <property name="schema"></property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
@@ -41,26 +36,22 @@
     <element value="plone.app.dexterity.behaviors.metadata.IPublication"/>
     <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>
     <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
-    <!-- <element value="plone.app.referenceablebehavior.referenceable.IReferenceable" /> -->
+    <!--<element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />-->
     <element value="plone.app.lockingbehavior.behaviors.ILocking" />
-    <element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage"/>
+    <!--<element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage"/>-->
     <!--<element value="plone.app.relationfield.behavior.IRelatedItems"/>-->
-    <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
+    <!--<element value="plone.app.versioningbehavior.behaviors.IVersionable" />-->
     <!--<element value="plone.app.contenttypes.behaviors.tableofcontents.ITableOfContents"/>-->
-    <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
-    <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
-    <element value="collective.behavior.gallery.behaviors.folderish_gallery.IFolderishGallery" />
-    <element value="plone.app.imagecropping.behaviors.IImageCroppingBehavior"/>
+    <!--<element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>-->
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++Real estate</property>
-  <property name="default_view">real-estate-view</property>
+  <property name="add_view_expr">string:${folder_url}/++add++Booking</property>
+  <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>
-  <property name="immediate_view">real-estate-view</property>
+  <property name="immediate_view">view</property>
   <property name="view_methods">
     <element value="view"/>
-    <element value="real-estate-view"/>
   </property>
 
   <!-- Method aliases -->
