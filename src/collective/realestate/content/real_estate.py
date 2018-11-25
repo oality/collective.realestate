@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.realestate import _
+from collective.realestate.schema import DateList
+from collective.realestate.vocabularies.types import RealEstateTypesFactory
 # from plone.app.textfield import RichText
 # from plone.autoform import directives
 from plone.dexterity.content import Container
@@ -20,11 +22,11 @@ class IRealEstate(model.Schema):
     # model.load('real_estate.xml')
 
     # directives.widget(level=RadioFieldWidget)
-    # level = schema.Choice(
-    #     title=_(u'Sponsoring Level'),
-    #     vocabulary=LevelVocabulary,
-    #     required=True
-    # )
+    level = schema.Choice(
+        title=_(u'Type of real estate'),
+        vocabulary=RealEstateTypesFactory,
+        required=True
+    )
 
     # text = RichText(
     #     title=_(u'Text'),
@@ -41,10 +43,33 @@ class IRealEstate(model.Schema):
         required=False
     )
 
-    # url = schema.URI(
-    #     title=_(u'Link'),
-    #     required=False
-    # )
+    bathrooms = schema.Int(
+        title=_(u'Number of bathroom(s)'),
+        required=False
+    )
+
+    area = schema.Float(
+        title=_(u'Area'),
+        description=_(u'Area in m²'),
+        required=False
+    )
+
+    parking = schema.Bool(
+        title=_(u'Parking'),
+        description=_(u'Is there a free parking'),
+        required=False
+    )
+
+    pets = schema.Bool(
+        title=_(u'Pets'),
+        description=_(u'Are pets authorised?'),
+        required=False
+    )
+
+    availability = DateList(
+        title=_(u'Avaiability'),
+        required=False
+    )
 
     # fieldset('Images', fields=['logo', 'advertisement'])
     # logo = namedfile.NamedBlobImage(

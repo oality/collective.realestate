@@ -6,7 +6,7 @@
 
   <!-- Basic properties -->
   <property
-      i18n:translate=""
+      i18n:translate="Real estate"
       name="title">Real estate</property>
   <property
       i18n:translate=""
@@ -21,10 +21,7 @@
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-  <!--
-    <element value="Document" />
-    <element value="File" />
-  -->
+    <element value="Image"/>
   </property>
   <!-- Schema, class and security -->
   <property name="add_permission">collective.realestate.AddRealEstate</property>
@@ -52,6 +49,7 @@
     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
     <element value="collective.behavior.gallery.behaviors.folderish_gallery.IFolderishGallery" />
+    <element value="plone.app.imagecropping.behaviors.IImageCroppingBehavior"/>
   </property>
 
   <!-- View information -->

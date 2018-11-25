@@ -5,9 +5,9 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
-        component=".string_numbers.StringNumbersFactory"
-        name="collective.realestate.StringNumbers"
+        component=".types.RealEstateTypesFactory"
+        name="collective.realestate.RealEstateTypes"
     />
 
-        
+
 </configure>

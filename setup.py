@@ -48,6 +48,7 @@ setup(
         'eea.facetednavigation',
         'collective.dexteritytextindexer',
         'collective.behavior.gallery',
+        'plone.app.imagecropping',
     ],
     extras_require={
         'test': [

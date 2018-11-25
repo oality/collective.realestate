@@ -27,26 +27,3 @@ class RealEstateSettingsEditForm(RegistryEditForm):
 
 RealEstateSettingsView = layout.wrap_form(
     RealEstateSettingsEditForm, ControlPanelFormWrapper)
-
-#
-# class RealEstateSettingsView(BrowserView):
-#     """
-#     View which wrap the settings form using ControlPanelFormWrapper to a HTML boilerplate frame.
-#     """
-#
-#     def render(self):
-#         view_factor = layout.wrap_form(
-#             RealEstateSettingsEditForm,
-#             ControlPanelFormWrapper
-#         )
-#         view = view_factor(self.context, self.request)
-#         return view()
-
-
-# from plone.app.controlpanel.form import ControlPanelForm
-# from z3c.form import field
-# class RealEstateControlPanel(ControlPanelForm):
-#
-#     label = _('Real Estate settings')
-#     description = _('Lets you change the settings of Real Estate')
-#     form_fields = field.Fields(IRealEstateSettings)

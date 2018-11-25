@@ -21,10 +21,10 @@
     />
 
   <browser:page
-    name="reservation-request"
+    name="booking-request"
     for="collective.realestate.content.real_estate.IRealEstate"
     permission="zope2.View"
-    class=".form.ReservationRequestForm"
+    class=".form.BookingRequestForm"
     layer="..interfaces.ICollectiveRealestateLayer"
     />
 
@@ -39,8 +39,8 @@
 
   <browser:page
     for="*"
-    name="request-reservation-email"
-    template="request-reservation-email.pt"
+    name="booking-request-email"
+    template="booking-request-email.pt"
     permission="zope.Public"
     layer="..interfaces.ICollectiveRealestateLayer"
     />

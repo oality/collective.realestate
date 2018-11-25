@@ -7,6 +7,14 @@ from zope.interface import implementer
 import logging
 
 
+indexed_fields = [
+    'persons',
+    'rooms',
+    'bathrooms',
+    'area',
+    'parking',
+    'pets',
+]
 logger = logging.getLogger('setuphandlers realestate')
 
 
@@ -22,14 +30,14 @@ class HiddenProfiles(object):
 
 def post_install(context):
     """Post install script"""
-    add_index('rooms')
-    add_index('persons')
+    for indexed_field in indexed_fields:
+        add_index(indexed_field)
 
 
 def uninstall(context):
     """Uninstall script"""
-    remove_index('rooms')
-    remove_index('persons')
+    for indexed_field in indexed_fields:
+        remove_index(indexed_field)
 
 
 def add_index(field_name):

@@ -15,7 +15,7 @@ from zope import schema
 from zope.component import getUtility
 
 
-class IReservationRequestForm(model.Schema):
+class IBookingRequestForm(model.Schema):
     """ Define form fields """
 
     name = schema.TextLine(
@@ -26,15 +26,15 @@ class IReservationRequestForm(model.Schema):
     )
 
 
-class ReservationRequestForm(form.Form):
+class BookingRequestForm(form.Form):
     """ Define Form handling
 
     This form can be accessed as
-    http://yoursite/real-estate-id/@@reservation-request
+    http://yoursite/real-estate-id/@@booking-request
 
     """
-    # schema = IReservationRequestForm
-    fields = field.Fields(IReservationRequestForm)
+    # schema = IBookingRequestForm
+    fields = field.Fields(IBookingRequestForm)
     ignoreContext = True
 
     label = _(u"What's your name?")  # noqa
