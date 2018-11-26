@@ -1,0 +1,15 @@
+.users:before {
+    content: url('/++plone++collective.realestate/person.svg');
+}
+
+.bedrooms:before {
+    content: url('/++plone++collective.realestate/bedroom.svg');
+}
+
+.bathrooms:before {
+    content: url('/++plone++collective.realestate/bathroom.svg');
+}
+
+.area:before {
+    content: url('/++plone++collective.realestate/size.svg');
+}
