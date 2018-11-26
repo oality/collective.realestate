@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 from collective.realestate import _
-from collective.realestate.schema import DateList
-from collective.realestate.vocabularies.types import RealEstateTypesFactory
 # from plone.app.textfield import RichText
 # from plone.autoform import directives
 from plone.dexterity.content import Container
@@ -22,10 +20,9 @@ class IRealEstate(model.Schema):
     # model.load('real_estate.xml')
 
     # directives.widget(level=RadioFieldWidget)
-    level = schema.Choice(
+    type = schema.Choice(
         title=_(u'Type of real estate'),
-        vocabulary=RealEstateTypesFactory,
-        required=True
+        vocabulary=u'collective.realestate.RealEstateTypes',
     )
 
     # text = RichText(
@@ -66,8 +63,13 @@ class IRealEstate(model.Schema):
         required=False
     )
 
-    availability = DateList(
-        title=_(u'Avaiability'),
+    low_price = schema.Float(
+        title=_(u'Price low season (for one day)'),
+        required=False
+    )
+
+    high_price = schema.Float(
+        title=_(u'Price high season (for one day)'),
         required=False
     )
 

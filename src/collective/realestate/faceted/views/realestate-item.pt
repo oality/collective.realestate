@@ -28,7 +28,7 @@
     <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
     <div class="realestate-rooms">
       <span i18n:translate="Rooms:">Chambres :</span>
-      <span  tal:content="rooms">Rooms</span>
+      <span class="users" tal:content="rooms">Rooms</span>
     </div>
 
 </tal:block>

@@ -1,18 +1,36 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="collective.realestate"
-      metal:use-macro="context/main_template/macros/master">
-<body>
-    <metal:block fill-slot="content-core">
-      <div class="heading">
-        <li i18n:translate="">
-          Sample View
-        </li>
-      <span tal:content="view/msg">this gets replaced</span>
-      </div>
-    </metal:block>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="collective.realestate"
+  metal:use-macro="context/main_template/macros/master">
 
-<body>
+  <metal:styleslot fill-slot="style_slot">
+    <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
+  </metal:styleslot>
+  <metal:script fill-slot="javascript_head_slot">
+<script type="text/javascript"
+   tal:define="navroot context/@@plone_portal_state/navigation_root_url"
+   tal:attributes="src string:${navroot}/++plone++collective.realestate/realestate.js"></script>
+  </metal:script>
+  <body>
+    <!-- <metal:content fill-slot="main"> -->
+    <metal:content fill-slot="content-core">
+
+      <div class="figures row">
+
+        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Personnes" class="col-xs-6 col-sm-4 col-lg-3 users" tal:condition="context/persons" tal:content="context/persons"></div>
+        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Chambres" class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms" tal:content="context/rooms"></div>
+        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Salle de bain" class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms" tal:content="context/bathrooms"></div>
+        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Superficie" class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area"><span tal:content="context/area"></span><span>m²</span></div>
+      </div>
+
+      <div id="parent-fieldname-text"
+           tal:condition="context/text"
+           tal:content="structure python:context.text.output_relative_to(view.context)"/>
+
+    </metal:content>
+
+  </body>
 </html>

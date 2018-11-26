@@ -2,17 +2,37 @@
 from collective.realestate import _
 from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 from plone.app.registry.browser.controlpanel import RegistryEditForm
+from plone.app.z3cform.wysiwyg import WysiwygFieldWidget
+from plone.autoform import directives
 from plone.z3cform import layout
-from zope import schema as zopeschema
+from zope import schema as zchema
 from zope.interface import Interface
 
 
 class IRealEstateSettings(Interface):
     """ Define settings data structure """
 
-    owner_email = zopeschema.ASCIILine(
+    owner_email = zchema.ASCIILine(
         title=_(u'Owner e-mail'),
         description=_(u'Default e-mail use to send request reservation.')
+    )
+
+    start_high = zchema.TextLine(
+        title=_(u'High season starting'),
+        description=_(u'Date like 01/07 for first July'),
+        default=_(u'01/07')
+    )
+
+    start_low = zchema.TextLine(
+        title=_(u'High season starting'),
+        description=_(u'Date like 01/10 for first October'),
+        default=_(u'01/10')
+    )
+
+    directives.widget(condition=WysiwygFieldWidget)
+    condition = zchema.Text(
+        title=_(u'General condition'),
+        description=_(u'This text is added below all real estate.')
     )
 
 

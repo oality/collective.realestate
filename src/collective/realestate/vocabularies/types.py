@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # from plone import api
-# from collective.realestate import _
+from collective.realestate import _
 from plone.dexterity.interfaces import IDexterityContent
 from zope.globalrequest import getRequest
 from zope.interface import implementer
@@ -31,8 +31,8 @@ class RealEstateTypes(object):
             terms.append(
                 SimpleTerm(
                     value=item,
-                    token=str(item),
-                    title=int(item),
+                    token=item,
+                    title=item,
                 )
             )
         return SimpleVocabulary(terms)

@@ -22,22 +22,23 @@
   <!-- Schema, class and security -->
   <property name="add_permission">collective.realestate.AddBooking</property>
   <property name="klass">collective.realestate.content.booking.Booking</property>
-  <property name="model_file">collective.realestate.content:booking.xml</property>
+  <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema"></property>
+  <property name="schema">collective.realestate.content.booking.IBooking</property>
+
 
   <!-- Enabled behaviors -->
-  <property name="behaviors" purge="false">
-    <element value="plone.app.content.interfaces.INameFromTitle"/>
-    <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
-    <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
-    <element value="plone.app.dexterity.behaviors.id.IShortName"/>
-    <element value="plone.app.dexterity.behaviors.metadata.IOwnership"/>
-    <element value="plone.app.dexterity.behaviors.metadata.IPublication"/>
-    <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>
-    <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
+  <property name="behaviors" purge="true">
+    <!-- <element value="plone.app.content.interfaces.INameFromTitle"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.id.IShortName"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.metadata.IOwnership"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.metadata.IPublication"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/> -->
+    <!-- <element value="plone.app.dexterity.behaviors.metadata.IBasic"/> -->
     <!--<element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />-->
-    <element value="plone.app.lockingbehavior.behaviors.ILocking" />
+    <!-- <element value="plone.app.lockingbehavior.behaviors.ILocking" /> -->
     <!--<element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage"/>-->
     <!--<element value="plone.app.relationfield.behavior.IRelatedItems"/>-->
     <!--<element value="plone.app.versioningbehavior.behaviors.IVersionable" />-->
