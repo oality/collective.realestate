@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.realestate">
+
+  -*- extra stuff goes here -*-
+
+  <browser:viewlet
+     name="leadimage-viewlet"
+     for="plone.app.contenttypes.interfaces.IDocument"
+     manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+     layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
+     class=".leadimage_viewlet.LeadimageViewlet"
+     permission="zope2.View"
+     />
+
+
+</configure>
