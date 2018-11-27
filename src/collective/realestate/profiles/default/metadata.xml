@@ -6,5 +6,6 @@
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-plone.app.imagecropping:default</dependency>
     <dependency>profile-collective.behavior.gallery:default</dependency>
+    <dependency>profile-plone.app.theming:default</dependency>
   </dependencies>
 </metadata>
