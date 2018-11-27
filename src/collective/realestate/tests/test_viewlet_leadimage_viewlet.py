@@ -37,7 +37,7 @@ class ViewletIntegrationTest(unittest.TestCase):
         )
         self.assertIsNotNone(manager)
         manager.update()
-        my_viewlet = [v for v in manager.viewlets if v.__name__ == 'leadimage-viewlet']  # NOQA: E501
+        my_viewlet = [v for v in manager.viewlets if v.__name__ == 'contentleadimage']  # NOQA: E501
         self.assertEqual(len(my_viewlet), 1)
 
     def test_myviewlet_in_my_collection(self):
@@ -52,7 +52,7 @@ class ViewletIntegrationTest(unittest.TestCase):
         )
         self.assertIsNotNone(manager)
         manager.update()
-        my_viewlet = [v for v in manager.viewlets if v.__name__ == 'leadimage-viewlet']  # NOQA: E501
+        my_viewlet = [v for v in manager.viewlets if v.__name__ == 'contentleadimage']  # NOQA: E501
         self.assertEqual(len(my_viewlet), 0)
 
 

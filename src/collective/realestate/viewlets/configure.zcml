@@ -4,15 +4,34 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.realestate">
 
-  -*- extra stuff goes here -*-
-
-  <browser:viewlet
-     name="leadimage-viewlet"
-     for="plone.app.contenttypes.interfaces.IDocument"
+  <!--browser:viewlet
+     name="contentleadimage"
+     for="plone.app.contenttypes.behaviors.leadimage.ILeadImage"
      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
      layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
-     class=".leadimage_viewlet.LeadimageViewlet"
+     view="plone.app.layout.globals.interfaces.IViewView"
+     class=".viewlet.LeadimageViewlet"
      permission="zope2.View"
+     /-->
+
+
+  <browser:viewlet
+    for="collective.behavior.gallery.behaviors.folderish_gallery.IFolderishGallery"
+    name="collective.behavior.gallery.files"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+    class=".viewlet.BookingsViewlet"
+    permission="zope.Public"
+    layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
+    />
+
+
+   <browser:viewlet
+     for="collective.realestate.content.real_estate.IRealEstate"
+     name="collective.realestate.condition"
+     manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+     class=".viewlet.GeneralCondViewlet"
+     permission="zope.Public"
+     layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
      />
 
 

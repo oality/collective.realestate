@@ -24,36 +24,36 @@ msgstr ""
 
 #: ../profiles/default/types/Booking.xml
 msgid "Add booking date"
-msgstr ""
+msgstr "Une date de réservation"
 
 #: ../vocabularies/types.py:27
 msgid "Apartment"
-msgstr ""
+msgstr "Appartement"
 
 #: ../content/real_estate.py:62
 msgid "Are pets authorised?"
-msgstr ""
+msgstr "Les animaux domistiques sont-ils acceptés ?"
 
 #: ../browser/real_estate_view.pt:36
 #: ../content/real_estate.py:49
 msgid "Area"
-msgstr ""
+msgstr "Superficie"
 
 #: ../content/real_estate.py:50
 msgid "Area in mÂ²"
-msgstr ""
+msgstr "Superficie en m²"
 
 #: ../browser/real_estate_view.pt:31
 msgid "Bathrooms"
-msgstr ""
+msgstr "Salles de bain"
 
 #: ../browser/real_estate_view.pt:26
 msgid "Bedomms"
-msgstr ""
+msgstr "Chambres"
 
 #: ../profiles/default/types/Booking.xml
 msgid "Booking"
-msgstr ""
+msgstr "Réservation"
 
 #: ../browser/form.py:83
 msgid "Cancel"
@@ -61,11 +61,11 @@ msgstr ""
 
 #: ../browser/controlpanel.py:22
 msgid "Date like 01/07 for first July"
-msgstr ""
+msgstr "Mettre '01/07' pour le premier juillet"
 
 #: ../browser/controlpanel.py:28
 msgid "Date like 01/10 for first October"
-msgstr ""
+msgstr "Mettre 01/10 pour le premier octobre"
 
 #: ../browser/controlpanel.py:17
 msgid "Default e-mail use to send request reservation."
@@ -74,16 +74,16 @@ msgstr ""
 #: ../profiles/default/types/Booking.xml
 #: ../profiles/default/types/Real_estate.xml
 msgid "Edit"
-msgstr ""
+msgstr "Edition"
 
 #: ../browser/form.py:49
 #: ../content/booking.py:18
 msgid "End of booking"
-msgstr ""
+msgstr "Fin de la réservation"
 
 #: ../faceted/views/configure.zcml:12
 msgid "Faceted items realestate"
-msgstr ""
+msgstr "Liste des biens immobilier"
 
 #: ../browser/form.py:66
 msgid "Form to make request booking"
@@ -91,80 +91,80 @@ msgstr ""
 
 #: ../browser/controlpanel.py:34
 msgid "General condition"
-msgstr ""
+msgstr "Condition générale"
 
 #: ../browser/controlpanel.py:21
 msgid "High season starting"
-msgstr ""
+msgstr "Commencement de la haute saison"
 
 #: ../vocabularies/types.py:28
 msgid "House"
-msgstr ""
+msgstr "Maison"
 
 #: ../configure.zcml:31
 msgid "Installs the collective.realestate add-on."
-msgstr ""
+msgstr "Installation de collective.realestate"
 
 #: ../faceted/widgets/intselect/widget.py:24
 msgid "Int Select"
-msgstr ""
+msgstr "Int select"
 
 #: ../content/real_estate.py:56
 msgid "Is there a free parking"
-msgstr ""
+msgstr "Parking gratuit"
 
 #: ../content/real_estate.py:44
 msgid "Number of bathroom(s)"
-msgstr ""
+msgstr "Nombre de salle(s) de bain"
 
 #: ../content/real_estate.py:39
 msgid "Number of bedroom(s)"
-msgstr ""
+msgstr "Nombre de chambre(s)"
 
 #: ../content/real_estate.py:34
 msgid "Number of person(s)"
-msgstr ""
+msgstr "Nombre de personnes"
 
 #: ../browser/controlpanel.py:16
 msgid "Owner e-mail"
-msgstr ""
+msgstr "E-mail du propriétaire"
 
 #: ../content/real_estate.py:55
 msgid "Parking"
-msgstr ""
+msgstr "Parking"
 
 #: ../browser/real_estate_view.pt:21
 msgid "Persons"
-msgstr ""
+msgstr "Personnes"
 
 #: ../content/real_estate.py:61
 msgid "Pets"
-msgstr ""
+msgstr "Animaux"
 
 #: ../content/real_estate.py:72
 msgid "Price high season (for one day)"
-msgstr ""
+msgstr "Prix en haute saison (pour un jour de location)"
 
 #: ../content/real_estate.py:67
 msgid "Price low season (for one day)"
-msgstr ""
+msgstr "Prix en basse saison (pour un jour de location)"
 
 #: ../browser/controlpanel.py:45
 msgid "Real Estate settings"
-msgstr ""
+msgstr "Paramètres du module de bien immobilier"
 
 #. Default: "Real estate"
 #: ../profiles/default/types/Real_estate.xml
 msgid "Real estate"
-msgstr ""
+msgstr "Bien immobilier"
 
 #: ../browser/real_estate_view.pt:57
 msgid "Request a booking"
-msgstr ""
+msgstr "Demande de réservation"
 
 #: ../browser/form.py:65
 msgid "Request booking"
-msgstr ""
+msgstr "Demande de réservation"
 
 #: ../faceted/widgets/intselect/interfaces.py:24
 msgid "Reverse options"
@@ -185,23 +185,23 @@ msgstr ""
 #: ../browser/form.py:45
 #: ../content/booking.py:14
 msgid "Start of booking"
-msgstr ""
+msgstr "Début de la réservation"
 
 #: ../faceted/widgets/intselect/interfaces.py:18
 msgid "Text to display after number"
-msgstr ""
+msgstr "Texte à afficher après le nombre"
 
 #: ../faceted/widgets/intselect/interfaces.py:19
 msgid "Text to display after number in select box"
-msgstr ""
+msgstr "Texte à afficher après le nombre dans le 'select box'"
 
 #: ../browser/controlpanel.py:35
 msgid "This text is added below all real estate."
-msgstr ""
+msgstr "Ce text est ajouté en-dessous de la ficher des biens immobilier"
 
 #: ../content/real_estate.py:24
 msgid "Type of real estate"
-msgstr ""
+msgstr "Type de bien"
 
 #: ../browser/form.py:125
 msgid "Unable to send mail: ${exception}"
@@ -218,15 +218,15 @@ msgstr ""
 
 #: ../browser/form.py:41
 msgid "Your e-mail"
-msgstr ""
+msgstr "Votre adresse e-mail"
 
 #: ../browser/form.py:38
 msgid "Your name"
-msgstr ""
+msgstr "Votre nom"
 
 #: ../browser/form.py:80
 msgid "Your request has been send to the owner"
-msgstr ""
+msgstr "Votre demande de réservation a été envoyée au propriétaire"
 
 #: ../content/real_estate.py:103
 msgid "between {0} and {1}"
@@ -243,7 +243,7 @@ msgstr ""
 #. Default: "<span>Price is between ${low_price} &euro; and ${high_price} &euro; </span>"
 #: ../browser/real_estate_view.pt:51
 msgid "price"
-msgstr ""
+msgstr "<span>Le prix sera compris entre ${low_price} &euro; et ${high_price} &euro; </span>"
 
 #. Default: "You are receiving this mail because ${fullname} ${from_address} is sending a request to book ${url}."
 #: ../browser/booking-request-email.pt:19

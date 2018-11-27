@@ -63,6 +63,8 @@ class Widget(CountableWidget):
         """ Return data vocabulary
         """
         reverse = safeToInt(self.data.get('sortreversed', 0))
+        # import ipdb; ipdb.set_trace()
+        self.data.catalog = 'portal_catalog'
         values = self.catalog_vocabulary()
         mapping = {}
 

@@ -13,11 +13,9 @@
   -->
   <!--<includeDependencies package="." />-->
 
-  <include package=".viewlets" />
-
-
   <include package=".browser" />
   <include package=".faceted" />
+  <include package=".viewlets" />
   <include package=".vocabularies" />
 
   <include file="permissions.zcml" />

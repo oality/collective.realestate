@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.realestate import _
+from plone import api
 from Products.Five.browser import BrowserView
-
 
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
@@ -12,5 +12,9 @@ class RealEstateView(BrowserView):
     # template = ViewPageTemplateFile('real_estate_view.pt')
 
     def __call__(self):
-        self.msg = _(u'A small message')
         return self.index()
+
+    def get_general_condition(self):
+        key = 'collective.realestate.condition'
+        text = api.portal.get_registry_record(key)
+        return text

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from collective.realestate import _
+from datetime import timedelta
 from plone.dexterity.content import Item
 from plone.supermodel import model
 from zope import schema
@@ -11,12 +12,10 @@ class IBooking(model.Schema):
     """
     start = schema.Date(
         title=_(u'Start of booking'),
-        required=True
     )
 
     end = schema.Date(
         title=_(u'End of booking'),
-        required=True
     )
 
 
@@ -24,3 +23,11 @@ class IBooking(model.Schema):
 class Booking(Item):
     """
     """
+
+    def get_all_dates(self):
+        dates = []
+        curr = self.start
+        while curr <= self.end:
+            dates.append(curr)
+            curr = curr + timedelta(days=1)
+        return dates

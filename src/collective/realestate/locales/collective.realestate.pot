@@ -1,0 +1,254 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-11-27 10:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.realestate\n"
+
+#: ../browser/controlpanel.py:23
+msgid "01/07"
+msgstr ""
+
+#: ../browser/controlpanel.py:29
+msgid "01/10"
+msgstr ""
+
+#: ../profiles/default/types/Booking.xml
+msgid "Add booking date"
+msgstr ""
+
+#: ../vocabularies/types.py:27
+msgid "Apartment"
+msgstr ""
+
+#: ../content/real_estate.py:62
+msgid "Are pets authorised?"
+msgstr ""
+
+#: ../browser/real_estate_view.pt:36
+#: ../content/real_estate.py:49
+msgid "Area"
+msgstr ""
+
+#: ../content/real_estate.py:50
+msgid "Area in mÂ²"
+msgstr ""
+
+#: ../browser/real_estate_view.pt:31
+msgid "Bathrooms"
+msgstr ""
+
+#: ../browser/real_estate_view.pt:26
+msgid "Bedomms"
+msgstr ""
+
+#: ../profiles/default/types/Booking.xml
+msgid "Booking"
+msgstr ""
+
+#: ../browser/form.py:83
+msgid "Cancel"
+msgstr ""
+
+#: ../browser/controlpanel.py:22
+msgid "Date like 01/07 for first July"
+msgstr ""
+
+#: ../browser/controlpanel.py:28
+msgid "Date like 01/10 for first October"
+msgstr ""
+
+#: ../browser/controlpanel.py:17
+msgid "Default e-mail use to send request reservation."
+msgstr ""
+
+#: ../profiles/default/types/Booking.xml
+#: ../profiles/default/types/Real_estate.xml
+msgid "Edit"
+msgstr ""
+
+#: ../browser/form.py:49
+#: ../content/booking.py:18
+msgid "End of booking"
+msgstr ""
+
+#: ../faceted/views/configure.zcml:12
+msgid "Faceted items realestate"
+msgstr ""
+
+#: ../browser/form.py:66
+msgid "Form to make request booking"
+msgstr ""
+
+#: ../browser/controlpanel.py:34
+msgid "General condition"
+msgstr ""
+
+#: ../browser/controlpanel.py:21
+msgid "High season starting"
+msgstr ""
+
+#: ../vocabularies/types.py:28
+msgid "House"
+msgstr ""
+
+#: ../configure.zcml:31
+msgid "Installs the collective.realestate add-on."
+msgstr ""
+
+#: ../faceted/widgets/intselect/widget.py:24
+msgid "Int Select"
+msgstr ""
+
+#: ../content/real_estate.py:56
+msgid "Is there a free parking"
+msgstr ""
+
+#: ../content/real_estate.py:44
+msgid "Number of bathroom(s)"
+msgstr ""
+
+#: ../content/real_estate.py:39
+msgid "Number of bedroom(s)"
+msgstr ""
+
+#: ../content/real_estate.py:34
+msgid "Number of person(s)"
+msgstr ""
+
+#: ../browser/controlpanel.py:16
+msgid "Owner e-mail"
+msgstr ""
+
+#: ../content/real_estate.py:55
+msgid "Parking"
+msgstr ""
+
+#: ../browser/real_estate_view.pt:21
+msgid "Persons"
+msgstr ""
+
+#: ../content/real_estate.py:61
+msgid "Pets"
+msgstr ""
+
+#: ../content/real_estate.py:72
+msgid "Price high season (for one day)"
+msgstr ""
+
+#: ../content/real_estate.py:67
+msgid "Price low season (for one day)"
+msgstr ""
+
+#: ../browser/controlpanel.py:45
+msgid "Real Estate settings"
+msgstr ""
+
+#. Default: "Real estate"
+#: ../profiles/default/types/Real_estate.xml
+msgid "Real estate"
+msgstr ""
+
+#: ../browser/real_estate_view.pt:57
+msgid "Request a booking"
+msgstr ""
+
+#: ../browser/form.py:65
+msgid "Request booking"
+msgstr ""
+
+#: ../faceted/widgets/intselect/interfaces.py:24
+msgid "Reverse options"
+msgstr ""
+
+#: ../browser/form.py:87
+msgid "See you next time!"
+msgstr ""
+
+#: ../tests/test_vocab_string_numbers.py:31
+msgid "Sony Aplha 7R III"
+msgstr ""
+
+#: ../faceted/widgets/intselect/interfaces.py:25
+msgid "Sort options reversed"
+msgstr ""
+
+#: ../browser/form.py:45
+#: ../content/booking.py:14
+msgid "Start of booking"
+msgstr ""
+
+#: ../faceted/widgets/intselect/interfaces.py:18
+msgid "Text to display after number"
+msgstr ""
+
+#: ../faceted/widgets/intselect/interfaces.py:19
+msgid "Text to display after number in select box"
+msgstr ""
+
+#: ../browser/controlpanel.py:35
+msgid "This text is added below all real estate."
+msgstr ""
+
+#: ../content/real_estate.py:24
+msgid "Type of real estate"
+msgstr ""
+
+#: ../browser/form.py:125
+msgid "Unable to send mail: ${exception}"
+msgstr ""
+
+#: ../configure.zcml:40
+msgid "Uninstalls the collective.realestate add-on."
+msgstr ""
+
+#: ../profiles/default/types/Booking.xml
+#: ../profiles/default/types/Real_estate.xml
+msgid "View"
+msgstr ""
+
+#: ../browser/form.py:41
+msgid "Your e-mail"
+msgstr ""
+
+#: ../browser/form.py:38
+msgid "Your name"
+msgstr ""
+
+#: ../browser/form.py:80
+msgid "Your request has been send to the owner"
+msgstr ""
+
+#: ../content/real_estate.py:103
+msgid "between {0} and {1}"
+msgstr ""
+
+#: ../configure.zcml:31
+msgid "collective.realestate"
+msgstr ""
+
+#: ../configure.zcml:40
+msgid "collective.realestate (uninstall)"
+msgstr ""
+
+#. Default: "<span>Price is between ${low_price} &euro; and ${high_price} &euro; </span>"
+#: ../browser/real_estate_view.pt:51
+msgid "price"
+msgstr ""
+
+#. Default: "You are receiving this mail because ${fullname} ${from_address} is sending a request to book ${url}."
+#: ../browser/booking-request-email.pt:19
+msgid "site_feedback_mailtemplate_body"
+msgstr ""

@@ -1,7 +1,9 @@
-<div class="photoAlbumEntry"
+<div class="col-xs-6"
+  i18n:domain="collective.realestate"
   tal:define="portal_type context/portal_type|string:;
               useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings|python:[];
               useView python:portal_type in useViewTypes;">
+  <div class="card">
   <a tal:define="
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
@@ -11,27 +13,48 @@
       view_url python:(url and useView and url + '/view') or url;
       is_namedimage python:getattr(getattr(context, 'image', None), 'getImageSize', None) is not None;
       image_thumb exists:context/image_thumb;
-      image_tag python:getattr(context, 'tag', None)"
+      image_tag python:getattr(context, 'tag', None);
+      navroot context/@@plone_portal_state/navigation_root_url"
      tal:attributes="href view_url;
-                     title description">
+                     title description"
+      class="card-body">
 
 <tal:block tal:condition="is_namedimage">
-    <span class="photoAlbumEntryWrapper">
 
-       <img style="border: none" tal:attributes="
+
+       <img class="card-img-top" style="border: none" tal:attributes="
         title desc_or_title;
         alt title;
-        src string:$url/@@images/image/thumb"/>
-    </span>
+        src string:$url/@@images/image/faceted"/>
 
-    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
-    <div class="realestate-rooms">
-      <span i18n:translate="Rooms:">Chambres :</span>
-      <span class="users" tal:content="rooms">Rooms</span>
+
+    <h5 class="card-title" tal:content="context/pretty_title_or_id|string:">Title</h5>
+    <span class="card-text" tal:content="description">Description</span>
+    <div class="visualClear" />
+    <div i18n:attributes="title" title="Persons"
+      class="col-xs-6 col-sm-4 col-lg-3 users text-center" tal:condition="context/persons" >
+      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/person.svg">
+      <span tal:content="context/persons"></span>
+    </div>
+    <div i18n:attributes="title" title="Bedrooms"
+      class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms">
+      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/bedroom.svg">
+      <span tal:content="context/rooms"></span>
+    </div>
+    <div i18n:attributes="title" title="Bathrooms"
+      class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms">
+      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/bathroom.svg">
+      <span tal:content="context/bathrooms"></span>
+    </div>
+    <div i18n:attributes="title" title="Area"
+      class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area">
+      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/size.svg">
+      <span tal:content="context/area"></span>
+      <span>m²</span>
     </div>
 
 </tal:block>
 
   </a>
+</div>
 </div>

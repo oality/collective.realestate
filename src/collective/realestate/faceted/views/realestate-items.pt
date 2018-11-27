@@ -3,8 +3,10 @@
   xmlns:metal="http://xml.zope.org/namespaces/metal"
   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
   metal:use-macro="context/main_template/macros/master"
-  i18n:domain="eea">
-
+  i18n:domain="collective.realestate">
+  <metal:styleslot fill-slot="style_slot">
+    <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
+  </metal:styleslot>
 <body>
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="content-core">

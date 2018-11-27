@@ -1,18 +1,34 @@
 # -*- coding: utf-8 -*-
 from collective.realestate import _
 from collective.realestate import logger
+from datetime import date
+from datetime import timedelta
 from email.MIMEText import MIMEText
 from plone import api
 from plone.registry.interfaces import IRegistry
 from plone.schema.email import Email
 from plone.supermodel import model
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces.controlpanel import IMailSchema
+from Products.statusmessages.interfaces import IStatusMessage
 from smtplib import SMTPException
 from z3c.form import button
 from z3c.form import field
 from z3c.form import form
 from zope import schema
 from zope.component import getUtility
+
+
+def date_default_value(offset=0):
+    return date.today() + timedelta(offset)
+
+
+def start_default_value():
+    return date_default_value()
+
+
+def end_default_value():
+    return date_default_value(7)
 
 
 class IBookingRequestForm(model.Schema):
@@ -22,7 +38,16 @@ class IBookingRequestForm(model.Schema):
         title=_(u'Your name')
     )
     email = Email(
-        title=_(u'Your e-mail')
+        title=_(u'Your e-mail'),
+        required=True,
+    )
+    start = schema.Date(
+        title=_(u'Start of booking'),
+        defaultFactory=start_default_value,
+    )
+    end = schema.Date(
+        title=_(u'End of booking'),
+        defaultFactory=end_default_value,
     )
 
 
@@ -37,8 +62,8 @@ class BookingRequestForm(form.Form):
     fields = field.Fields(IBookingRequestForm)
     ignoreContext = True
 
-    label = _(u"What's your name?")  # noqa
-    description = _(u'Simple, sample form')
+    label = _(u"Request booking")  # noqa
+    description = _(u'Form to make request booking')
 
     @button.buttonAndHandler(u'Send')
     def handleApply(self, action):
@@ -55,15 +80,20 @@ class BookingRequestForm(form.Form):
         self.status = _(u'Your request has been send to the owner')
         self.request.response.redirect(self.context.absolute_url())
 
-    @button.buttonAndHandler(u"Cancel")
+    @button.buttonAndHandler(_(u'Cancel'))
     def handleCancel(self, action):
         """User cancelled. Redirect back to the front page.
         """
         self.status = _(u'See you next time!')
         self.request.response.redirect(self.context.absolute_url())
 
+    def generate_mail(self, variables, encoding='utf-8'):
+        template = self.context.restrictedTraverse('booking-request-email')
+        variables['realestate_url'] = self.context.absolute_url()
+        return template(self.context, **variables).encode(encoding)
+
     def send_message(self, data):
-        subject = data.get('subject')
+        subject = _(u'Request booking')
 
         portal = api.portal.get()
         registry = getUtility(IRegistry)
@@ -77,7 +107,7 @@ class BookingRequestForm(form.Form):
         data['url'] = portal.absolute_url()
         message = self.generate_mail(data, encoding)
         message = MIMEText(message, 'plain', encoding)
-        message['Reply-To'] = data['sender_from_address']
+        message['Reply-To'] = data['email']
 
         try:
             # This actually sends out the mail

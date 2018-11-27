@@ -31,7 +31,7 @@ class IRealEstate(model.Schema):
     # )
 
     persons = schema.Int(
-        title=_(u'Number of peron(s)'),
+        title=_(u'Number of person(s)'),
         required=False
     )
 
@@ -96,3 +96,14 @@ class IRealEstate(model.Schema):
 class RealEstate(Container):
     """
     """
+
+    def get_price(self, days=7):
+        one_week_low = self.low_price * days
+        one_week_high = self.high_price * days
+        return _('between {0} and {1}'.format(one_week_low, one_week_high))
+
+    def get_low_price(self, days=7):
+        return '{0:.2f}'.format(self.low_price * days)
+
+    def get_high_price(self, days=7):
+        return '{0:.2f}'.format(self.high_price * days)

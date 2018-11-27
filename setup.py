@@ -49,6 +49,8 @@ setup(
         'collective.dexteritytextindexer',
         'collective.behavior.gallery',
         'plone.app.imagecropping',
+        'collective.geo.leaflet',
+        'collective.geo.faceted',
     ],
     extras_require={
         'test': [

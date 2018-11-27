@@ -10,26 +10,53 @@
     <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
   </metal:styleslot>
   <metal:script fill-slot="javascript_head_slot">
-<script type="text/javascript"
-   tal:define="navroot context/@@plone_portal_state/navigation_root_url"
-   tal:attributes="src string:${navroot}/++plone++collective.realestate/realestate.js"></script>
+    <script type="text/javascript" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="src string:${navroot}/++plone++collective.realestate/realestate.js"></script>
   </metal:script>
   <body>
     <!-- <metal:content fill-slot="main"> -->
     <metal:content fill-slot="content-core">
 
-      <div class="figures row">
+      <div class="figures row" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
 
-        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Personnes" class="col-xs-6 col-sm-4 col-lg-3 users" tal:condition="context/persons" tal:content="context/persons"></div>
-        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Chambres" class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms" tal:content="context/rooms"></div>
-        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Salle de bain" class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms" tal:content="context/bathrooms"></div>
-        <div data-toggle="tooltip" data-placement="bottom" i18n:attributes="title" title="Superficie" class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area"><span tal:content="context/area"></span><span>m²</span></div>
+        <div i18n:attributes="title" title="Persons"
+          class="col-xs-6 col-sm-4 col-lg-3 users text-center" tal:condition="context/persons" >
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/person.svg">
+          <span tal:content="context/persons"></span>
+        </div>
+        <div i18n:attributes="title" title="Bedomms"
+          class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/bedroom.svg">
+          <span tal:content="context/rooms"></span>
+        </div>
+        <div i18n:attributes="title" title="Bathrooms"
+          class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/bathroom.svg">
+          <span tal:content="context/bathrooms"></span>
+        </div>
+        <div i18n:attributes="title" title="Area"
+          class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/size.svg">
+          <span tal:content="context/area"></span>
+          <span>m²</span>
+        </div>
       </div>
-
-      <div id="parent-fieldname-text"
-           tal:condition="context/text"
-           tal:content="structure python:context.text.output_relative_to(view.context)"/>
-
+      <div class="visualClear"></div>
+      <div id="parent-fieldname-text" tal:condition="context/text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
+      <div class="visualClear"></div>
+      <div id="priceandrequest" class="card text-right">
+        <div i18n:translate="price">
+          <span>Price is between
+            <span i18n:name="low_price" tal:replace="context/get_low_price"></span>
+            &euro; and
+            <span i18n:name="high_price" tal:replace="context/get_high_price"></span>
+            &euro;
+          </span>
+        </div>
+      <form tal:attributes="action string:${context/absolute_url}/booking-request" method="get" id="request-booking">
+        <button type="submit" form="request-booking" class="btn btn-primary btn-lg" i18n:translate="Request a booking">Request a booking</button>
+      </form>
+      </div>
+      <div class="visualClear"></div>
     </metal:content>
 
   </body>
