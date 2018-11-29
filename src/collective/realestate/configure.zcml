@@ -49,7 +49,7 @@
   <plone:static
       directory="theme"
       type="theme"
-      name="real-esate"
+      name="real-estate"
       />
 
 

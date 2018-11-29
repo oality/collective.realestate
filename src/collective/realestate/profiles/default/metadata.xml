@@ -7,5 +7,9 @@
     <dependency>profile-plone.app.imagecropping:default</dependency>
     <dependency>profile-collective.behavior.gallery:default</dependency>
     <dependency>profile-plone.app.theming:default</dependency>
+    <!-- <dependency>profile-collective.geo.leaflet:default</dependency> -->
+    <!-- <dependency>profile-collective.geo.faceted:default</dependency> -->
+    <!-- <dependency>profile-plone.app.multilingual:default</dependency> -->
+    <dependency>profile-collective.behavior.banner:default</dependency>
   </dependencies>
 </metadata>

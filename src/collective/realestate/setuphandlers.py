@@ -14,6 +14,8 @@ indexed_fields = [
     'area',
     'parking',
     'pets',
+    'type',
+    'price',
 ]
 logger = logging.getLogger('setuphandlers realestate')
 
@@ -32,6 +34,24 @@ def post_install(context):
     """Post install script"""
     for indexed_field in indexed_fields:
         add_index(indexed_field)
+    api.portal.set_registry_record('plone.resources.development', True)
+    api.portal.set_registry_record('plone.allowed_sizes', [
+        u'large 768:768',
+        u'preview 400:400',
+        u'mini 200:200',
+        u'thumb 128:128',
+        u'tile 64:64',
+        u'icon 32:32',
+        u'listing 16:16',
+        u'banner 2000:600',
+    ])
+    key = 'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale'  # noqa
+    api.portal.set_registry_record(key, 'banner')
+    # key = 'plone.default_language'
+    # api.portal.set_registry_record(key, 'fr')
+    # api.portal.set_registry_record('plone.available_languages', ['fr', 'es'])
+    # api.content.create(type='LRF', id='fr', title=u'Français', container=api.portal.get())
+    # api.content.create(type='LRF', id='es', title=u'Espagnol', container=api.portal.get())
 
 
 def uninstall(context):

@@ -11,7 +11,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 
 @implementer(IVocabularyFactory)
-class RealEstateTypes(object):
+class RealEstateFor(object):
     """
     """
 
@@ -21,23 +21,12 @@ class RealEstateTypes(object):
         if not IDexterityContent.providedBy(context):
             req = getRequest()
             context = req.PARENTS[0]
-
         terms = []
-        types = {
-            'appart': _(u'Apartment'),
-            'house': _(u'House / Villa'),
-            'garage': _(u'Garage'),
-            'lots': _(u'Lots / Land'),
-        }
-        for id, item in types.items():
-            terms.append(
-                SimpleTerm(
-                    value=id,
-                    token=id,
-                    title=item,
-                )
-            )
+        terms.append(
+            SimpleTerm(value='sale', token='sale', title=_(u'Sale')))
+        terms.append(
+            SimpleTerm(value='rent', token='rent', title=_(u'Rent')))
         return SimpleVocabulary(terms)
 
 
-RealEstateTypesFactory = RealEstateTypes()
+RealEstateForFactory = RealEstateFor()

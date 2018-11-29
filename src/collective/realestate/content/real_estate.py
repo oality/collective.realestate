@@ -20,6 +20,10 @@ class IRealEstate(model.Schema):
     # model.load('real_estate.xml')
 
     # directives.widget(level=RadioFieldWidget)
+    sale_or_rent = schema.Choice(
+        title=_(u'Sale or rent?'),
+        vocabulary=u'collective.realestate.RealEstateFor',
+    )
     type = schema.Choice(
         title=_(u'Type of real estate'),
         vocabulary=u'collective.realestate.RealEstateTypes',
@@ -63,13 +67,8 @@ class IRealEstate(model.Schema):
         required=False
     )
 
-    low_price = schema.Float(
-        title=_(u'Price low season (for one day)'),
-        required=False
-    )
-
-    high_price = schema.Float(
-        title=_(u'Price high season (for one day)'),
+    price = schema.Float(
+        title=_(u'Price'),
         required=False
     )
 
@@ -96,14 +95,20 @@ class IRealEstate(model.Schema):
 class RealEstate(Container):
     """
     """
+    def is_rent(self):
+        return self.sale_or_rent == 'rent'
+
+    def is_sale(self):
+        return self.sale_or_rent == 'sale'
 
     def get_price(self, days=7):
-        one_week_low = self.low_price * days
-        one_week_high = self.high_price * days
-        return _('between {0} and {1}'.format(one_week_low, one_week_high))
+        if self.is_sale():
+            return '{0:.0f}'.format(self.price)
+        else:
+            return '{0:.2f}'.format(self.price * days)
 
     def get_low_price(self, days=7):
-        return '{0:.2f}'.format(self.low_price * days)
+        return '{0:.2f}'.format(self.price * days)
 
     def get_high_price(self, days=7):
-        return '{0:.2f}'.format(self.high_price * days)
+        return '{0:.2f}'.format(self.price * days)

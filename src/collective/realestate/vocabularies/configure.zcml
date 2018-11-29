@@ -8,6 +8,10 @@
         component=".types.RealEstateTypesFactory"
         name="collective.realestate.RealEstateTypes"
     />
+    <utility
+        component=".for.RealEstateForFactory"
+        name="collective.realestate.RealEstateFor"
+    />
 
 
 </configure>

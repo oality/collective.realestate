@@ -6,12 +6,12 @@
   i18n:domain="collective.realestate"
   metal:use-macro="context/main_template/macros/master">
 
-  <metal:styleslot fill-slot="style_slot">
+  <!-- <metal:styleslot fill-slot="style_slot">
     <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
   </metal:styleslot>
   <metal:script fill-slot="javascript_head_slot">
     <script type="text/javascript" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="src string:${navroot}/++plone++collective.realestate/realestate.js"></script>
-  </metal:script>
+  </metal:script> -->
   <body>
     <!-- <metal:content fill-slot="main"> -->
     <metal:content fill-slot="content-core">
@@ -43,7 +43,15 @@
       <div class="visualClear"></div>
       <div id="parent-fieldname-text" tal:condition="context/text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
       <div class="visualClear"></div>
-      <div id="priceandrequest" class="card text-right">
+      <div tal:condition="context/is_sale" class="card text-right">
+        <div i18n:translate="sale-price">
+          <span>Price is
+            <span i18n:name="price" tal:replace="context/get_price"></span>
+            &euro;
+          </span>
+        </div>
+      </div>
+      <div id="priceandrequest" tal:condition="context/is_rent" class="card text-right">
         <div i18n:translate="price">
           <span>Price is between
             <span i18n:name="low_price" tal:replace="context/get_low_price"></span>

@@ -4,9 +4,7 @@
   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
   metal:use-macro="context/main_template/macros/master"
   i18n:domain="collective.realestate">
-  <metal:styleslot fill-slot="style_slot">
-    <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
-  </metal:styleslot>
+
 <body>
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="content-core">
@@ -15,10 +13,10 @@
         Batch python:modules['Products.CMFPlone'].Batch;
         b_start python:request.get('b_start', 0);
         batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);">
-
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
         <div class="eea-preview-items">
+          <div class="visualClear" />
           <tal:entries repeat="brain batch">
             <tal:entry tal:define="doc brain/getObject|nothing" tal:condition="python:doc is not None">
               <tal:preview tal:condition="exists:doc/@@faceted-realestate-item" tal:replace="structure doc/@@faceted-realestate-item" />

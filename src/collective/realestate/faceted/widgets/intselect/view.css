@@ -15,9 +15,9 @@
   overflow: hidden;
 }
 
-.faceted-widget {
+/* .faceted-widget {
   float: left;
-}
+} */
 
 #faceted-form fieldset {
   border-color: white;

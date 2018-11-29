@@ -15,6 +15,7 @@
     You are receiving this mail because
     <span i18n:name="fullname" tal:omit-tag="" tal:content="options/name|nothing"/>
     <span i18n:name="from_address" tal:omit-tag="" tal:content="options/email"/>
+    <span i18n:name="phone" tal:omit-tag="" tal:content="options/phone"/>
     is sending a request to book
     <span i18n:name="url" tal:replace="options/realestate_url"/>.
   </div>

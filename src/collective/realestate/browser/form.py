@@ -41,6 +41,11 @@ class IBookingRequestForm(model.Schema):
         title=_(u'Your e-mail'),
         required=True,
     )
+    phone = schema.TextLine(
+        title=_(u'Your phone number'),
+        description=_(u'Your phone will be used only to take contact with you.'),  # noqa
+        required=False,
+    )
     start = schema.Date(
         title=_(u'Start of booking'),
         defaultFactory=start_default_value,
