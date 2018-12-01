@@ -38,8 +38,7 @@ class BookingIntegrationTest(unittest.TestCase):
     def test_ct_booking_schema(self):
         fti = queryUtility(IDexterityFTI, name='Booking')
         schema = fti.lookupSchema()
-        schema_name = portalTypeToSchemaName('Booking')
-        self.assertEqual(schema_name, schema.getName())
+        self.assertEqual(IBooking, schema)
 
     def test_ct_booking_fti(self):
         fti = queryUtility(IDexterityFTI, name='Booking')

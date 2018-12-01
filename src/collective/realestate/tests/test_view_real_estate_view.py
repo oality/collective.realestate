@@ -19,21 +19,15 @@ class ViewsIntegrationTest(unittest.TestCase):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
         api.content.create(self.portal, 'Folder', 'other-folder')
         api.content.create(self.portal, 'Collection', 'my-collection')
+        api.content.create(self.portal, 'Real estate', 'my-realestate')
 
     def test_real_estate_view_is_registered(self):
         view = getMultiAdapter(
-            (self.portal['other-folder'], self.portal.REQUEST),
+            (self.portal['my-realestate'], self.portal.REQUEST),
             name='real-estate-view'
         )
-        self.assertTrue(view(), 'real-estate-view is not found')
-        self.assertTrue(
-            'Sample View' in view(),
-            'Sample View is not found in real-estate-view'
-        )
-        self.assertTrue(
-            'Sample View' in view(),
-            'A small message is not found in real-estate-view'
-        )
+        self.assertTrue('<div class="figures row">' in view(),
+                        'class figures row not found in real-estate-view')
 
     def test_real_estate_view_in_my_collection(self):
         with self.assertRaises(ComponentLookupError):

@@ -18,7 +18,7 @@ class CollectiveRealestateLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
-        self.loadZCML(package=collective.realestate)
+        self.loadZCML(package=collective.realestate, name='testing.zcml')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'collective.realestate:default')
