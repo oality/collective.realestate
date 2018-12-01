@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-11-27 10:38+0000\n"
+"POT-Creation-Date: 2018-11-30 16:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,20 +33,22 @@ msgstr ""
 msgid "Apartment"
 msgstr ""
 
-#: ../content/real_estate.py:62
+#: ../content/real_estate.py:66
 msgid "Are pets authorised?"
 msgstr ""
 
 #: ../browser/real_estate_view.pt:36
-#: ../content/real_estate.py:49
+#: ../content/real_estate.py:53
+#: ../faceted/views/realestate-item.pt:49
 msgid "Area"
 msgstr ""
 
-#: ../content/real_estate.py:50
+#: ../content/real_estate.py:54
 msgid "Area in mÂ²"
 msgstr ""
 
 #: ../browser/real_estate_view.pt:31
+#: ../faceted/views/realestate-item.pt:44
 msgid "Bathrooms"
 msgstr ""
 
@@ -54,11 +56,15 @@ msgstr ""
 msgid "Bedomms"
 msgstr ""
 
+#: ../faceted/views/realestate-item.pt:39
+msgid "Bedrooms"
+msgstr ""
+
 #: ../profiles/default/types/Booking.xml
 msgid "Booking"
 msgstr ""
 
-#: ../browser/form.py:83
+#: ../browser/form.py:88
 msgid "Cancel"
 msgstr ""
 
@@ -79,7 +85,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: ../browser/form.py:49
+#: ../browser/form.py:54
 #: ../content/booking.py:18
 msgid "End of booking"
 msgstr ""
@@ -88,8 +94,12 @@ msgstr ""
 msgid "Faceted items realestate"
 msgstr ""
 
-#: ../browser/form.py:66
+#: ../browser/form.py:71
 msgid "Form to make request booking"
+msgstr ""
+
+#: ../vocabularies/types.py:29
+msgid "Garage"
 msgstr ""
 
 #: ../browser/controlpanel.py:34
@@ -101,7 +111,7 @@ msgid "High season starting"
 msgstr ""
 
 #: ../vocabularies/types.py:28
-msgid "House"
+msgid "House / Villa"
 msgstr ""
 
 #: ../configure.zcml:31
@@ -112,19 +122,27 @@ msgstr ""
 msgid "Int Select"
 msgstr ""
 
-#: ../content/real_estate.py:56
+#: ../content/real_estate.py:60
 msgid "Is there a free parking"
 msgstr ""
 
-#: ../content/real_estate.py:44
+#: ../faceted/widgets/layout/layout.py:47
+msgid "Layout selection"
+msgstr ""
+
+#: ../vocabularies/types.py:30
+msgid "Lots / Land"
+msgstr ""
+
+#: ../content/real_estate.py:48
 msgid "Number of bathroom(s)"
 msgstr ""
 
-#: ../content/real_estate.py:39
+#: ../content/real_estate.py:43
 msgid "Number of bedroom(s)"
 msgstr ""
 
-#: ../content/real_estate.py:34
+#: ../content/real_estate.py:38
 msgid "Number of person(s)"
 msgstr ""
 
@@ -132,24 +150,21 @@ msgstr ""
 msgid "Owner e-mail"
 msgstr ""
 
-#: ../content/real_estate.py:55
+#: ../content/real_estate.py:59
 msgid "Parking"
 msgstr ""
 
 #: ../browser/real_estate_view.pt:21
+#: ../faceted/views/realestate-item.pt:34
 msgid "Persons"
 msgstr ""
 
-#: ../content/real_estate.py:61
+#: ../content/real_estate.py:65
 msgid "Pets"
 msgstr ""
 
-#: ../content/real_estate.py:72
-msgid "Price high season (for one day)"
-msgstr ""
-
-#: ../content/real_estate.py:67
-msgid "Price low season (for one day)"
+#: ../content/real_estate.py:71
+msgid "Price"
 msgstr ""
 
 #: ../browser/controlpanel.py:45
@@ -161,11 +176,15 @@ msgstr ""
 msgid "Real estate"
 msgstr ""
 
-#: ../browser/real_estate_view.pt:57
+#: ../vocabularies/for.py:28
+msgid "Rent"
+msgstr ""
+
+#: ../browser/real_estate_view.pt:64
 msgid "Request a booking"
 msgstr ""
 
-#: ../browser/form.py:65
+#: ../browser/form.py:70
 msgid "Request booking"
 msgstr ""
 
@@ -173,7 +192,15 @@ msgstr ""
 msgid "Reverse options"
 msgstr ""
 
-#: ../browser/form.py:87
+#: ../vocabularies/for.py:26
+msgid "Sale"
+msgstr ""
+
+#: ../content/real_estate.py:24
+msgid "Sale or rent?"
+msgstr ""
+
+#: ../browser/form.py:92
 msgid "See you next time!"
 msgstr ""
 
@@ -185,7 +212,7 @@ msgstr ""
 msgid "Sort options reversed"
 msgstr ""
 
-#: ../browser/form.py:45
+#: ../browser/form.py:50
 #: ../content/booking.py:14
 msgid "Start of booking"
 msgstr ""
@@ -202,11 +229,11 @@ msgstr ""
 msgid "This text is added below all real estate."
 msgstr ""
 
-#: ../content/real_estate.py:24
+#: ../content/real_estate.py:28
 msgid "Type of real estate"
 msgstr ""
 
-#: ../browser/form.py:125
+#: ../browser/form.py:130
 msgid "Unable to send mail: ${exception}"
 msgstr ""
 
@@ -219,6 +246,10 @@ msgstr ""
 msgid "View"
 msgstr ""
 
+#: ../faceted/widgets/layout/layout.py:25
+msgid "Views"
+msgstr ""
+
 #: ../browser/form.py:41
 msgid "Your e-mail"
 msgstr ""
@@ -227,12 +258,16 @@ msgstr ""
 msgid "Your name"
 msgstr ""
 
-#: ../browser/form.py:80
-msgid "Your request has been send to the owner"
+#: ../browser/form.py:45
+msgid "Your phone number"
 msgstr ""
 
-#: ../content/real_estate.py:103
-msgid "between {0} and {1}"
+#: ../browser/form.py:46
+msgid "Your phone will be used only to take contact with you."
+msgstr ""
+
+#: ../browser/form.py:85
+msgid "Your request has been send to the owner"
 msgstr ""
 
 #: ../configure.zcml:31
@@ -244,11 +279,16 @@ msgid "collective.realestate (uninstall)"
 msgstr ""
 
 #. Default: "<span>Price is between ${low_price} &euro; and ${high_price} &euro; </span>"
-#: ../browser/real_estate_view.pt:51
+#: ../browser/real_estate_view.pt:59
 msgid "price"
 msgstr ""
 
-#. Default: "You are receiving this mail because ${fullname} ${from_address} is sending a request to book ${url}."
-#: ../browser/booking-request-email.pt:19
+#. Default: "<span>Price is ${price} &euro; </span>"
+#: ../browser/real_estate_view.pt:49
+msgid "sale-price"
+msgstr ""
+
+#. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a request to book ${url}."
+#: ../browser/booking-request-email.pt:20
 msgid "site_feedback_mailtemplate_body"
 msgstr ""
