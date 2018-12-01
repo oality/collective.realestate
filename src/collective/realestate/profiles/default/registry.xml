@@ -38,7 +38,7 @@
     <value key="depends">faceted-jquery</value>
     <value key="csscompilation">++plone++static/realestate-faceted-view.min.css</value>
     <value key="jscompilation">++plone++static/realestate-faceted-view.min.js</value>
-    <value key="compile">False</value>
+    <value key="compile">True</value>
     <value key="enabled">True</value>
   </records>
 

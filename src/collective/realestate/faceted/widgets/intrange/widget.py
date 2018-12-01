@@ -48,15 +48,16 @@ class Widget(AbstractWidget):
             value = form.get(self.data.getId(), '')
             if not value or len(value) != 2:
                 return query
-            min, max = value
+            min, max = [int(x) if x else 0 for x in value]
 
+        # import ipdb; ipdb.set_trace()
         if not value:
             return query
         # portal_catalog({'price':{'query':[2,1000],'range':'min:max'}})
-        if min:
+        if min and not max:
             value = min
             range = 'min'
-        elif max:
+        elif max and not min:
             value = max
             range = 'max'
         else:

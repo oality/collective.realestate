@@ -42,16 +42,22 @@ Faceted.IntRangeWidget.prototype = {
   },
 
   do_query: function(element){
-    var min = this.min.val();
-    var max = this.max.val();
-    if(!min || !max){
+    var min = Number(this.min.val());
+    if (isNaN(min) || min == 0) {
+      min = '';
+    }
+    var max = Number(this.max.val());
+    if (isNaN(max) || max == 0) {
+      max = '';
+    }
+    if(!min && !max){
       this.selected = [];
       return false;
     }
 
     var value = [min, max];
-    if(max<min){
-      var msg = 'Invalid range';
+    if(max!="" && max<min){
+      var msg = max+"<"+min;
       Faceted.Form.raise_error(msg, this.wid + '_errors', []);
     }else{
       this.selected = [this.min, this.max];
@@ -156,7 +162,7 @@ Faceted.IntRangeWidget.prototype = {
 };
 
 Faceted.initializeIntRangeWidget = function(evt){
-  jQuery('div.faceted-range-widget').each(function(){
+  jQuery('div.faceted-intrange-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];
     Faceted.Widgets[wid] = new Faceted.IntRangeWidget(wid);
