@@ -1,0 +1,12 @@
+.faceted-intrange-widget-form div {
+  float: left;
+  margin-left: 0.5em;
+}
+
+.faceted-intrange-widget-form div label {
+  display: block;
+}
+
+.faceted-intrange-widget-form input {
+  width: 10em;
+}

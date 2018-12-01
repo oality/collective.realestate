@@ -1,0 +1,31 @@
+<configure
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:faceted="http://namespaces.zope.org/faceted"
+  i18n_domain="colective.realestate">
+
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.IIntRangeSchema"
+    />
+
+  <browser:resource
+    name="collective.realestate.faceted.widgets.intrange.view.js"
+    file="./view.js"
+    />
+
+  <browser:resource
+    name="collective.realestate.faceted.widgets.intrange.edit.js"
+    file="./edit.js"
+    />
+
+  <browser:resource
+    name="collective.realestate.faceted.widgets.intrange.view.css"
+    file="./view.css"
+    />
+
+  <browser:resource
+    name="collective.realestate.faceted.widgets.intrange.edit.css"
+    file="./edit.css"
+    />
+
+</configure>

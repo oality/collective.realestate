@@ -1,4 +1,4 @@
-FacetedEdit.SelectWidget = function(wid){
+FacetedEdit.IntSelectWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
   this.elements = jQuery('option', this.widget);
@@ -14,7 +14,7 @@ FacetedEdit.SelectWidget = function(wid){
   this.count();
 };
 
-FacetedEdit.SelectWidget.prototype = {
+FacetedEdit.IntSelectWidget.prototype = {
   count: function(){
     if(!this.widget.hasClass('faceted-count')){
       return;
@@ -44,16 +44,16 @@ FacetedEdit.SelectWidget.prototype = {
   }
 };
 
-FacetedEdit.initializeSelectWidget = function(){
+FacetedEdit.initializeIntSelectWidget = function(){
   jQuery('div.faceted-intselect-widget').each(function(){
       var wid = jQuery(this).attr('id');
       wid = wid.split('_')[0];
-      FacetedEdit.Widgets[wid] = new FacetedEdit.SelectWidget(wid);
+      FacetedEdit.Widgets[wid] = new FacetedEdit.IntSelectWidget(wid);
   });
 };
 
 jQuery(document).ready(function(){
   jQuery(FacetedEdit.Events).bind(
     FacetedEdit.Events.INITIALIZE_WIDGETS,
-    FacetedEdit.initializeSelectWidget);
+    FacetedEdit.initializeIntSelectWidget);
 });

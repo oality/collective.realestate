@@ -1,6 +1,6 @@
 /* Select Widget
 */
-Faceted.SelectWidget = function(wid){
+Faceted.IntSelectWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + this.wid + '_widget');
   this.widget.show();
@@ -54,7 +54,7 @@ Faceted.SelectWidget = function(wid){
   }
 };
 
-Faceted.SelectWidget.prototype = {
+Faceted.IntSelectWidget.prototype = {
   select_change: function(element, evt){
     if(!jQuery(element).val()){
       element = null;
@@ -216,16 +216,16 @@ Faceted.SelectWidget.prototype = {
   }
 };
 
-Faceted.initializeSelectWidget = function(evt){
+Faceted.initializeIntSelectWidget = function(evt){
   jQuery('div.faceted-intselect-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];
-    Faceted.Widgets[wid] = new Faceted.SelectWidget(wid);
+    Faceted.Widgets[wid] = new Faceted.IntSelectWidget(wid);
   });
 };
 
 jQuery(document).ready(function(){
   jQuery(Faceted.Events).bind(
     Faceted.Events.INITIALIZE,
-    Faceted.initializeSelectWidget);
+    Faceted.initializeIntSelectWidget);
 });

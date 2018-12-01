@@ -2,5 +2,6 @@
     xmlns="http://namespaces.zope.org/zope">
 
     <include package=".intselect" />
+    <include package=".intrange" />
 
 </configure>

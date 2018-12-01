@@ -1,0 +1,39 @@
+<div class="faceted-widget faceted-intrange-widget" style="display: none"
+     i18n:domain="collective.realestate" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default_value python:view.default;
+  default_min python:default_value[0];
+  default_max python:default_value[1];
+  css string:faceted-widget ${view/css_class};
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+<legend tal:define="title python:view.data.get('title', '')" tal:content="
+  python:view.translate(title)" i18n:translate="">Price range</legend>
+
+<form action="." method="get" class="faceted-intrange-widget-form"
+  tal:on-error="structure python:error_view(error=error, cid=wid)">
+  <div tal:attributes="id string:${wid}_min;">
+    <label tal:attributes="for string:$wid-min-input"
+      i18n:translate="">Minimum price</label>
+    <input type="text" name="min" title="Minimum price" tal:attributes="
+      id string:$wid-min-input;
+      value default_min"
+      i18n:attributes="title" />
+  </div>
+  <div tal:attributes="id string:${wid}_max;">
+    <label tal:attributes="for string:$wid-max-input"
+      i18n:translate="">Maximum price</label>
+    <input type="text" name="max" title="Maximum price" tal:attributes="
+      id string:$wid-max-input;
+      value default_max"
+      i18n:attributes="title" />
+  </div>
+  <div tal:attributes="id string:${wid}_errors"></div>
+</form>
+
+</fieldset>
+</div>
