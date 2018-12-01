@@ -17,6 +17,12 @@ class Widget(AbstractWidget):
     groups = (DefaultSchemata, LayoutSchemata)
     index = ViewPageTemplateFile('widget.pt')
 
+    # @property
+    # def css_class(self):
+    #     css = super(Widget, self).css_class
+    #     css += ' col-xs-12 col-sm-6 col-lg-6 users'
+    #     return css
+
     @property
     def default(self):
         """ Return default
