@@ -1,0 +1,18 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <include file="configure.zcml" />
+  <include package="plone.app.imagecropping" />
+  <include package="collective.behavior.banner" />
+  <include package="collective.behavior.gallery" />
+
+
+  <!--genericsetup:registerProfile
+      name="testing"
+      title="collective.realestate: testing"
+      directory="profiles/testing"
+      description="Installs collective.realestate test profile"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      /-->
+
+</configure>
