@@ -21,10 +21,13 @@ require([
 
       function update_map() {
         // console.log('change');
-        if ($('.geolocation_wrapper').length) {
+        if ($('.geolocation_wrapper').length && $('.map').length) {
           var geolocation_wrapper = $('.geolocation_wrapper')[0];
           var divmap = $('.map')[0];
-          divmap.dataset.geojson = geolocation_wrapper.dataset.json;
+          if (geolocation_wrapper.dataset.hasOwnProperty('json')
+              && divmap.dataset.hasOwnProperty('geojson')) {
+            divmap.dataset.geojson = geolocation_wrapper.dataset.json;
+          }
           // registry.init();
           // map.update();
 
