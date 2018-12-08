@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
+from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
-import json
+from zope.annotation.interfaces import IAnnotations
 
 
 class LeadimageViewlet(ViewletBase):
@@ -37,3 +37,17 @@ class GeneralCondViewlet(ViewletBase):
         text = api.portal.get_registry_record(key)
         # import ipdb; ipdb.set_trace()
         return text if text else ''
+
+
+class MapViewlet(ViewletBase):
+
+    index = ViewPageTemplateFile('map.pt')
+
+    def available(self):
+        if not getattr(self.context, 'layout', '') == 'facetednavigation_view':
+            return False
+        view_name = IAnnotations(self.context).get(
+            ANNO_FACETED_LAYOUT, 'faceted-preview-items')
+        if not view_name == 'faceted-map-view':
+            return False
+        return True

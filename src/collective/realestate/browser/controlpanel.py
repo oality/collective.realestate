@@ -4,9 +4,11 @@ from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.app.z3cform.wysiwyg import WysiwygFieldWidget
 from plone.autoform import directives
+from plone.formwidget.geolocation.field import GeolocationField
 from plone.z3cform import layout
 from zope import schema as zchema
 from zope.interface import Interface
+from plone.formwidget.geolocation.interfaces import IGeolocation
 
 
 class IRealEstateSettings(Interface):
@@ -34,6 +36,14 @@ class IRealEstateSettings(Interface):
         title=_(u'General condition'),
         description=_(u'This text is added below all real estate.')
     )
+
+    marker_icons = zchema.ASCIILine(
+        title=_(u'Marker icons'),
+        description=_(u'Update marker path.'),
+        required=False
+    )
+    latitude = zchema.TextLine(title=_(u'Latitude'), required=False)
+    longitude = zchema.TextLine(title=_(u'Longitude'), required=False)
 
 
 class RealEstateSettingsEditForm(RegistryEditForm):

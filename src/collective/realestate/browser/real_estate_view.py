@@ -13,9 +13,3 @@ class RealEstateView(BrowserView):
 
     def __call__(self):
         return self.index()
-
-    def get_general_condition(self):
-        key = 'collective.realestate.condition'
-        text = api.portal.get_registry_record(key)
-        import ipdb; ipdb.set_trace()
-        return text

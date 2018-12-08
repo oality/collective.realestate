@@ -54,6 +54,10 @@ setup(
         # 'collective.geo.leaflet',
         # 'collective.geo.faceted',
         'collective.behavior.banner',
+        'collective.eeafaceted.layoutwidget',
+        'collective.address',
+        'collective.geolocationbehavior',
+        'geojson',
     ],
     extras_require={
         'test': [

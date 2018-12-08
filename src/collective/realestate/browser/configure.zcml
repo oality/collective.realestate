@@ -52,4 +52,12 @@
     permission="cmf.ManagePortal"
     />
 
+  <browser:page
+    for="*"
+    name="maps_configuration"
+    class=".config.MapsConfig"
+    permission="zope2.View"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
 </configure>

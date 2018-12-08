@@ -51,6 +51,8 @@
     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
     <element value="collective.behavior.gallery.behaviors.folderish_gallery.IFolderishGallery" />
     <element value="plone.app.imagecropping.behaviors.IImageCroppingBehavior"/>
+    <element value="collective.address.address"/>
+    <element value="geolocatable"/>
   </property>
 
   <!-- View information -->

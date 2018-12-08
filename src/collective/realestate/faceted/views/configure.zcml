@@ -5,17 +5,32 @@
   i18n_domain="collective.realestate">
 
   <faceted:view
-      name="faceted-realestate-items"
-      template="realestate-items.pt"
-      title="Faceted items realestate"
-      permission="zope2.View"
-      />
+    name="faceted-realestate-items"
+    template="realestate-items.pt"
+    title="Faceted items realestate"
+    permission="zope2.View"
+    />
 
-    <browser:page
-      name="faceted-realestate-item"
-      for="zope.interface.Interface"
-      template="realestate-item.pt"
-      permission="zope2.View"
-  />
+  <browser:page
+    name="faceted-realestate-item"
+    for="zope.interface.Interface"
+    template="realestate-item.pt"
+    permission="zope2.View"
+    />
+
+  <faceted:view
+    name="faceted-map-view"
+    template="map.pt"
+    title="Faceted map view"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="faceted-single-map-view"
+    class=".view.MapView"
+    permission="zope2.View"
+    />
+
 
 </configure>

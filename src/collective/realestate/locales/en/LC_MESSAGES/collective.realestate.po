@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-11-30 16:21+0000\n"
+"POT-Creation-Date: 2018-12-07 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../browser/controlpanel.py:23
+#: ../browser/controlpanel.py:25
 msgid "01/07"
 msgstr ""
 
-#: ../browser/controlpanel.py:29
+#: ../browser/controlpanel.py:31
 msgid "01/10"
 msgstr ""
 
@@ -65,15 +65,23 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../browser/controlpanel.py:22
+#: ../faceted/widgets/intrange/interfaces.py:16
+msgid "Catalog index"
+msgstr ""
+
+#: ../faceted/widgets/intrange/interfaces.py:17
+msgid "Catalog index to use for search"
+msgstr ""
+
+#: ../browser/controlpanel.py:24
 msgid "Date like 01/07 for first July"
 msgstr ""
 
-#: ../browser/controlpanel.py:28
+#: ../browser/controlpanel.py:30
 msgid "Date like 01/10 for first October"
 msgstr ""
 
-#: ../browser/controlpanel.py:17
+#: ../browser/controlpanel.py:19
 msgid "Default e-mail use to send request reservation."
 msgstr ""
 
@@ -91,6 +99,10 @@ msgstr ""
 msgid "Faceted items realestate"
 msgstr ""
 
+#: ../faceted/views/configure.zcml:26
+msgid "Faceted map view"
+msgstr ""
+
 #: ../browser/form.py:71
 msgid "Form to make request booking"
 msgstr ""
@@ -99,11 +111,11 @@ msgstr ""
 msgid "Garage"
 msgstr ""
 
-#: ../browser/controlpanel.py:34
+#: ../browser/controlpanel.py:36
 msgid "General condition"
 msgstr ""
 
-#: ../browser/controlpanel.py:21
+#: ../browser/controlpanel.py:23
 msgid "High season starting"
 msgstr ""
 
@@ -111,7 +123,7 @@ msgstr ""
 msgid "House / Villa"
 msgstr ""
 
-#: ../configure.zcml:31
+#: ../configure.zcml:32
 msgid "Installs the collective.realestate add-on."
 msgstr ""
 
@@ -119,16 +131,36 @@ msgstr ""
 msgid "Int Select"
 msgstr ""
 
+#: ../faceted/widgets/intrange/widget.py:15
+msgid "Int range field"
+msgstr ""
+
 #: ../content/real_estate.py:60
 msgid "Is there a free parking"
 msgstr ""
 
-#: ../faceted/widgets/layout/layout.py:47
-msgid "Layout selection"
+#: ../browser/controlpanel.py:45
+msgid "Latitude"
+msgstr ""
+
+#: ../browser/controlpanel.py:46
+msgid "Longitude"
 msgstr ""
 
 #: ../vocabularies/types.py:30
 msgid "Lots / Land"
+msgstr ""
+
+#: ../browser/controlpanel.py:41
+msgid "Marker icons"
+msgstr ""
+
+#: ../faceted/widgets/intrange/widget.pt:28
+msgid "Maximum price"
+msgstr ""
+
+#: ../faceted/widgets/intrange/widget.pt:20
+msgid "Minimum price"
 msgstr ""
 
 #: ../content/real_estate.py:48
@@ -143,7 +175,7 @@ msgstr ""
 msgid "Number of person(s)"
 msgstr ""
 
-#: ../browser/controlpanel.py:16
+#: ../browser/controlpanel.py:18
 msgid "Owner e-mail"
 msgstr ""
 
@@ -164,7 +196,7 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: ../browser/controlpanel.py:45
+#: ../browser/controlpanel.py:55
 msgid "Real Estate settings"
 msgstr ""
 
@@ -201,10 +233,6 @@ msgstr ""
 msgid "See you next time!"
 msgstr ""
 
-#: ../tests/test_vocab_string_numbers.py:31
-msgid "Sony Aplha 7R III"
-msgstr ""
-
 #: ../faceted/widgets/intselect/interfaces.py:25
 msgid "Sort options reversed"
 msgstr ""
@@ -222,7 +250,7 @@ msgstr ""
 msgid "Text to display after number in select box"
 msgstr ""
 
-#: ../browser/controlpanel.py:35
+#: ../browser/controlpanel.py:37
 msgid "This text is added below all real estate."
 msgstr ""
 
@@ -234,17 +262,17 @@ msgstr ""
 msgid "Unable to send mail: ${exception}"
 msgstr ""
 
-#: ../configure.zcml:40
+#: ../configure.zcml:41
 msgid "Uninstalls the collective.realestate add-on."
+msgstr ""
+
+#: ../browser/controlpanel.py:42
+msgid "Update marker path."
 msgstr ""
 
 #: ../profiles/default/types/Booking.xml
 #: ../profiles/default/types/Real_estate.xml
 msgid "View"
-msgstr ""
-
-#: ../faceted/widgets/layout/layout.py:25
-msgid "Views"
 msgstr ""
 
 #: ../browser/form.py:41
@@ -267,11 +295,11 @@ msgstr ""
 msgid "Your request has been send to the owner"
 msgstr ""
 
-#: ../configure.zcml:31
+#: ../configure.zcml:32
 msgid "collective.realestate"
 msgstr ""
 
-#: ../configure.zcml:40
+#: ../configure.zcml:41
 msgid "collective.realestate (uninstall)"
 msgstr ""
 

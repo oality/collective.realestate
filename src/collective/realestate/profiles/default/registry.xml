@@ -44,4 +44,50 @@
 
   <records interface="collective.realestate.browser.controlpanel.IRealEstateSettings" prefix="collective.realestate">
   </records>
+
+  <records interface="plone.formwidget.geolocation.interfaces.IGeolocation" prefix="collective.realestate.geolocation">
+  </records>
+
+
+  <records prefix="plone.resources/pat-leaflet-faceted"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++collective.realestate/pat-leaflet-faceted.js</value>
+      <value key="css">
+          <element>++plone++collective.realestate/leaflet-faceted.css</element>
+      </value>
+      <value key="deps">leaflet-awesomemarkers</value>
+  </records>
+
+  <records prefix="plone.resources/bundle-leaflet-faceted"
+              interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++collective.realestate/bundle-leaflet-faceted.js</value>
+      <value key="css">
+          <element>++plone++patternslib/bundle-leaflet.less</element>
+      </value>
+  </records>
+
+  <records prefix="plone.bundles/bundle-leaflet-faceted"
+         interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+        <element>bundle-leaflet-faceted</element>
+    </value>
+    <value key="enabled">True</value>
+    <value key="depends">plone</value>
+    <value key="jscompilation">++plone++collective.realestate/bundle-leaflet-faceted-compiled.min.js</value>
+    <value key="csscompilation">++plone++collective.realestate/bundle-leaflet-faceted-compiled.css</value>
+    <value key="last_compilation">2018-12-08 10:41:00</value>
+    <value key="stub_js_modules">
+      <element>jquery.form</element>
+      <element>jquery</element>
+      <element>pat-base</element>
+      <element>pat-compat</element>
+      <element>pat-logger</element>
+      <element>pat-mockup-parser</element>
+      <element>pat-registry</element>
+      <element>pat-utils</element>
+      <element>select2</element>
+      <element>underscore</element>
+      <element>moment</element>
+    </value>
+</records>
 </registry>

@@ -17,6 +17,7 @@
   <include package=".faceted" />
   <include package=".viewlets" />
   <include package=".vocabularies" />
+  <include package="collective.eeafaceted.layoutwidget" />
 
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />
