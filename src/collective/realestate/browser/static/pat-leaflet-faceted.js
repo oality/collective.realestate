@@ -17,17 +17,17 @@ var baseLayers,
       'leaflet',
       'leaflet-awesomemarkers',
       'leaflet-fullscreen',
-      'leaflet-providers',
-      'leaflet-geosearch',
       'leaflet-geosearch-bing',
       'leaflet-geosearch-esri',
       'leaflet-geosearch-google',
       'leaflet-geosearch-openstreetmap',
-      'leaflet-markercluster',
+      'leaflet-geosearch',
       'leaflet-locatecontrol',
+      'leaflet-markercluster',
       'leaflet-minimap',
-      'leaflet-sleep',
+      'leaflet-providers',
       'leaflet-simplemarkers'
+      'leaflet-sleep',
     ], function() {
       return factory.apply(this, arguments);
     });
