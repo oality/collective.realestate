@@ -311,7 +311,7 @@ msgstr "<span>Le prix sera compris entre ${low_price} &euro; et ${high_price} &e
 #. Default: "<span>Price is ${price} &euro; </span>"
 #: ../browser/real_estate_view.pt:49
 msgid "sale-price"
-msgstr "Prix de vente"
+msgstr "${price}"
 
 #. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a request to book ${url}."
 #: ../browser/booking-request-email.pt:20

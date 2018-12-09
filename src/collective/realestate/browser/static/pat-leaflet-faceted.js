@@ -26,7 +26,7 @@ var baseLayers,
       'leaflet-markercluster',
       'leaflet-minimap',
       'leaflet-providers',
-      'leaflet-simplemarkers'
+      'leaflet-simplemarkers',
       'leaflet-sleep',
     ], function() {
       return factory.apply(this, arguments);

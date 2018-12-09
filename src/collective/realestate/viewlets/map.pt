@@ -1,5 +1,5 @@
 <tal:condition tal:condition="view/available">
-  <div class="pat-leaflet-faceted map"
+  <div class="pat-leaflet-faceted viewletmap"
     tal:define="
       view nocall:context/@@faceted-single-map-view;
       json view/json;"

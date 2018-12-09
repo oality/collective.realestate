@@ -20,22 +20,22 @@
 
         <div i18n:attributes="title" title="Persons"
           class="col-xs-6 col-sm-4 col-lg-3 users text-center" tal:condition="context/persons" >
-          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/person.svg">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/person.svg">
           <span tal:content="context/persons"></span>
         </div>
         <div i18n:attributes="title" title="Bedomms"
           class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms">
-          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/bedroom.svg">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/bedroom.svg">
           <span tal:content="context/rooms"></span>
         </div>
         <div i18n:attributes="title" title="Bathrooms"
           class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms">
-          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/bathroom.svg">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/bathroom.svg">
           <span tal:content="context/bathrooms"></span>
         </div>
         <div i18n:attributes="title" title="Area"
           class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area">
-          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/size.svg">
+          <img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/size.svg">
           <span tal:content="context/area"></span>
           <span>m²</span>
         </div>
@@ -43,13 +43,8 @@
       <div class="visualClear"></div>
       <div id="parent-fieldname-text" tal:condition="context/text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
       <div class="visualClear"></div>
-      <div tal:condition="context/is_sale" class="card text-right">
-        <div i18n:translate="sale-price">
-          <span>Price is
-            <span i18n:name="price" tal:replace="context/get_price"></span>
-            &euro;
-          </span>
-        </div>
+      <div tal:condition="context/is_sale" class="price row text-right float-right">
+            <span tal:replace="structure context/get_formatted_price"></span>
       </div>
       <div id="priceandrequest" tal:condition="context/is_rent" class="card text-right">
         <div i18n:translate="price">
@@ -65,6 +60,7 @@
       </form>
       </div>
       <div class="visualClear"></div>
+      <div class="geolocation" tal:content="structure view/get_geo_widget"></div>
     </metal:content>
 
   </body>
