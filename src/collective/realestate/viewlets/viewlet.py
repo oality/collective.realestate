@@ -35,7 +35,6 @@ class GeneralCondViewlet(ViewletBase):
     def index(self):
         key = 'collective.realestate.condition'
         text = api.portal.get_registry_record(key)
-        # import ipdb; ipdb.set_trace()
         return text if text else ''
 
 
