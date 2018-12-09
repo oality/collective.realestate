@@ -10,6 +10,8 @@ from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
 
+import locale
+
 
 class IRealEstate(model.Schema):
     """ Marker interface and Dexterity Python Schema for RealEstate
@@ -72,24 +74,6 @@ class IRealEstate(model.Schema):
         required=False
     )
 
-    # fieldset('Images', fields=['logo', 'advertisement'])
-    # logo = namedfile.NamedBlobImage(
-    #     title=_(u'Logo'),
-    #     required=False,
-    # )
-
-    # advertisement = namedfile.NamedBlobImage(
-    #     title=_(u'Advertisement (Gold-sponsors and above)'),
-    #     required=False,
-    # )
-
-    # directives.read_permission(notes='cmf.ManagePortal')
-    # directives.write_permission(notes='cmf.ManagePortal')
-    # notes = RichText(
-    #     title=_(u'Secret Notes (only for site-admins)'),
-    #     required=False
-    # )
-
 
 @implementer(IRealEstate)
 class RealEstate(Container):
@@ -100,6 +84,15 @@ class RealEstate(Container):
 
     def is_sale(self):
         return self.sale_or_rent == 'sale'
+
+    def get_formatted_price(self, days=7, devise='&euro;'):
+        price = self.get_price(days)
+        locale.setlocale(locale.LC_ALL, '')
+        formatted_price = '{0} {1}'.format(
+            locale.currency(float(price), symbol='', grouping=True),
+            devise
+        )
+        return formatted_price
 
     def get_price(self, days=7):
         if self.is_sale():
