@@ -57,7 +57,8 @@ setup(
         'collective.eeafaceted.layoutwidget',
         'collective.address',
         'collective.geolocationbehavior',
-        'geojson',
+        'plone.formwidget.captcha',
+        'ftw.calendar',
     ],
     extras_require={
         'test': [
