@@ -16,6 +16,7 @@ indexed_fields = [
     'pets',
     'type',
     'price',
+    'sale_or_rent',
 ]
 logger = logging.getLogger('setuphandlers realestate')
 

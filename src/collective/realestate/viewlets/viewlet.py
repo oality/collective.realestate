@@ -21,6 +21,7 @@ class BookingsViewlet(ViewletBase):
     index = ViewPageTemplateFile('bookings.pt')
 
     def get_data(self):
+        # import ipdb; ipdb.set_trace()
         dates = []
         brains = api.content.find(context=self.context, portal_type='Booking')
         for brain in brains:
@@ -47,6 +48,7 @@ class MapViewlet(ViewletBase):
             return False
         view_name = IAnnotations(self.context).get(
             ANNO_FACETED_LAYOUT, 'faceted-preview-items')
+
         if not view_name == 'faceted-map-view':
             return False
         return True

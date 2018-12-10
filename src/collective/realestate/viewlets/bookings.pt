@@ -1,4 +1,4 @@
-<div id="bookings-viewlet" i18n:domain="plone" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
+<div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
 
   <tal:block define="view nocall:context/listing_view" tal:condition="view/batch">
     <legend i18n:translate="">Bookings</legend>

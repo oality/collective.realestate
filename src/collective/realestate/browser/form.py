@@ -5,6 +5,9 @@ from datetime import date
 from datetime import timedelta
 from email.MIMEText import MIMEText
 from plone import api
+from plone.formwidget.captcha.validator import CaptchaValidator
+from plone.formwidget.captcha.validator import WrongCaptchaCode
+from plone.formwidget.captcha.widget import CaptchaFieldWidget
 from plone.registry.interfaces import IRegistry
 from plone.schema.email import Email
 from plone.supermodel import model
@@ -31,9 +34,7 @@ def end_default_value():
     return date_default_value(7)
 
 
-class IBookingRequestForm(model.Schema):
-    """ Define form fields """
-
+class IRequestForm(model.Schema):
     name = schema.TextLine(
         title=_(u'Your name')
     )
@@ -46,6 +47,16 @@ class IBookingRequestForm(model.Schema):
         description=_(u'Your phone will be used only to take contact with you.'),  # noqa
         required=False,
     )
+
+    captcha = schema.TextLine(
+        title=_(u'Captcha'),
+        required=False
+    )
+
+
+class IBookingRequestForm(IRequestForm):
+    """ Define form fields """
+
     start = schema.Date(
         title=_(u'Start of booking'),
         defaultFactory=start_default_value,
@@ -56,7 +67,7 @@ class IBookingRequestForm(model.Schema):
     )
 
 
-class BookingRequestForm(form.Form):
+class RequestForm(form.Form):
     """ Define Form handling
 
     This form can be accessed as
@@ -64,18 +75,35 @@ class BookingRequestForm(form.Form):
 
     """
     # schema = IBookingRequestForm
-    fields = field.Fields(IBookingRequestForm)
+    fields = field.Fields(IRequestForm)
+    fields['captcha'].widgetFactory = CaptchaFieldWidget
     ignoreContext = True
+    email_view = 'request-email'
 
-    label = _(u"Request booking")  # noqa
-    description = _(u'Form to make request booking')
+    label = _(u"Request")  # noqa
+    description = _(u'Form to make request')
 
-    @button.buttonAndHandler(u'Send')
+    @button.buttonAndHandler(_(u'Send'))
     def handleApply(self, action):
         data, errors = self.extractData()
         if errors:
             self.status = self.formErrorsMessage
             return
+
+        if 'captcha' in data:
+            captcha = CaptchaValidator(
+                self.context, self.request, None, IRequestForm['captcha'], None)
+            try:
+                captcha.validate(data['captcha'])
+            except WrongCaptchaCode:
+                # import ipdb; ipdb.set_trace()
+                message = _(u'Wrong captcha code')
+                api.portal.show_message(
+                    message=message, request=self.request, type='error')
+                return
+
+            # else;
+
 
         # Do something with valid data here
 
@@ -93,9 +121,15 @@ class BookingRequestForm(form.Form):
         self.request.response.redirect(self.context.absolute_url())
 
     def generate_mail(self, variables, encoding='utf-8'):
-        template = self.context.restrictedTraverse('booking-request-email')
+        template = self.context.restrictedTraverse(self.email_view)
         variables['realestate_url'] = self.context.absolute_url()
         return template(self.context, **variables).encode(encoding)
+
+    def message(self, data, encoding):
+        message = self.generate_mail(data, encoding)
+        message = MIMEText(message, 'plain', encoding)
+        message['Reply-To'] = data['email']
+        return message
 
     def send_message(self, data):
         subject = _(u'Request booking')
@@ -110,14 +144,11 @@ class BookingRequestForm(form.Form):
         host = getToolByName(self.context, 'MailHost')
 
         data['url'] = portal.absolute_url()
-        message = self.generate_mail(data, encoding)
-        message = MIMEText(message, 'plain', encoding)
-        message['Reply-To'] = data['email']
 
         try:
             # This actually sends out the mail
             host.send(
-                message,
+                self.message(data, encoding),
                 send_to_address,
                 from_address,
                 subject=subject,
@@ -130,3 +161,12 @@ class BookingRequestForm(form.Form):
             message = _(u'Unable to send mail: ${exception}',
                         mapping={u'exception': exception})
             IStatusMessage(self.request).add(message, type=u'error')
+
+
+class BookingRequestForm(RequestForm):
+    fields = field.Fields(IBookingRequestForm)
+    fields['captcha'].widgetFactory = CaptchaFieldWidget
+    ignoreContext = True
+    email_view = 'booking-request-email'
+    label = _(u"Request booking")  # noqa
+    description = _(u'Form to make request booking')

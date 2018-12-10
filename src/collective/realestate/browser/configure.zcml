@@ -21,6 +21,14 @@
     />
 
   <browser:page
+    name="info-request"
+    for="collective.realestate.content.real_estate.IRealEstate"
+    permission="zope2.View"
+    class=".form.RequestForm"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <browser:page
     name="booking-request"
     for="collective.realestate.content.real_estate.IRealEstate"
     permission="zope2.View"
@@ -32,15 +40,23 @@
     name="real-estate-view"
     for="Products.CMFCore.interfaces.IFolderish"
     class=".real_estate_view.RealEstateView"
-    template="real_estate_view.pt"
+    template="templates/real_estate_view.pt"
     permission="zope2.View"
     layer="..interfaces.ICollectiveRealestateLayer"
     />
 
   <browser:page
     for="*"
+    name="request-email"
+    template="templates/request-email.pt"
+    permission="zope.Public"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <browser:page
+    for="*"
     name="booking-request-email"
-    template="booking-request-email.pt"
+    template="templates/booking-request-email.pt"
     permission="zope.Public"
     layer="..interfaces.ICollectiveRealestateLayer"
     />

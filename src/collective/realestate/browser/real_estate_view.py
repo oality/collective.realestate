@@ -14,10 +14,17 @@ class RealEstateView(BrowserView):
     def __call__(self):
         return self.index()
 
-    def get_geo_widget(self):
+    def get_data_geojson(self):
         widget = GeolocationWidget(self.request)
         widget.value = (
             self.context.geolocation.latitude,
             self.context.geolocation.longitude
         )
-        return widget.render()
+        widget.context = self.context
+        return widget.data_geojson
+
+    def get_geo_values(self):
+        return (
+            self.context.geolocation.latitude,
+            self.context.geolocation.longitude
+        )

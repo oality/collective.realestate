@@ -16,14 +16,13 @@
 
 
   <browser:viewlet
-    for="collective.behavior.gallery.behaviors.folderish_gallery.IFolderishGallery"
-    name="collective.behavior.gallery.files"
+    for="collective.realestate.content.real_estate.IRealEstate"
+    name="collective.realestate.bookings"
     manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
     class=".viewlet.BookingsViewlet"
     permission="zope.Public"
     layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
     />
-
 
    <browser:viewlet
      for="collective.realestate.content.real_estate.IRealEstate"

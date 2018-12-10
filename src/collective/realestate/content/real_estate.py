@@ -105,3 +105,19 @@ class RealEstate(Container):
 
     def get_high_price(self, days=7):
         return '{0:.2f}'.format(self.price * days)
+
+    def get_formatted_address(self):
+        street = getattr(self, 'street', '')
+        zip_code = getattr(self, 'zip_code', '')
+        city = getattr(self, 'city', '')
+        # country = getattr(self.context, 'country', '')
+        address = []
+
+        address.append(u'<div class="address">')
+        if street:
+            address.append(u'<div class="street">{0}</div>'.format(street))
+        if zip_code and city:
+            address.append(u'<div class="city">{0} {1}</div>'.format(
+                zip_code, city))
+        address.append(u'</div>')
+        return ''.join(address)
