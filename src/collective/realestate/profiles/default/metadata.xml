@@ -14,5 +14,7 @@
     <dependency>profile-collective.geolocationbehavior:default</dependency>
     <dependency>profile-collective.eeafaceted.layoutwidget:default</dependency>
     <dependency>profile-plone.formwidget.captcha:default</dependency>
+    <dependency>profile-ftw.calendar:default</dependency>
+    <dependency>profile-collective.autoscaling:default</dependency>
   </dependencies>
 </metadata>

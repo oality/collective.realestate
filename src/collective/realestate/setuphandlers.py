@@ -35,7 +35,7 @@ def post_install(context):
     """Post install script"""
     for indexed_field in indexed_fields:
         add_index(indexed_field)
-    api.portal.set_registry_record('plone.resources.development', True)
+    # api.portal.set_registry_record('plone.resources.development', True)
     api.portal.set_registry_record('plone.allowed_sizes', [
         u'large 768:768',
         u'preview 400:400',

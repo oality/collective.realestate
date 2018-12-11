@@ -80,7 +80,7 @@
             "zoomcontrol": true,
             "minimap": true,
             "geosearch": true,
-            "geosearch_provider": "google",
+            "geosearch_provider": "openstreetmap",
             "addmarker": false
           }'></div>
         </div>

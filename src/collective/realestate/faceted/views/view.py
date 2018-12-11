@@ -21,6 +21,8 @@ def get_json(brains):
     features = []
     for brain in brains:
         obj = brain.getObject()
+        if not getattr(obj, 'geolocation', None):
+            continue
         latitude = getattr(obj.geolocation, 'latitude', None)
         longitude = getattr(obj.geolocation, 'longitude', None)
         if not latitude and not longitude:
