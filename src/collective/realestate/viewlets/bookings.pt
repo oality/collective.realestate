@@ -12,5 +12,4 @@
       tal:attributes="src string:./ftwcalendar_config.js"></script>
   <div id="calendar"></div>
 
-
 </div>
