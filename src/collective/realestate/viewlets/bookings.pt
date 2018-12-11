@@ -1,50 +1,16 @@
+
 <div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
 
-  <tal:block define="view nocall:context/listing_view" tal:condition="view/batch">
-    <legend i18n:translate="">Bookings</legend>
+  <tal:block define="view nocall:context/ftwcalendar_view">
+    <legend i18n:translate="Bookings">Bookings</legend>
     <!-- <tal:macro define="listing_macro view/macros/listing|view/index/macros/listing">
       <metal:use_macro use-macro="listing_macro"/>
 
     </tal:macro> -->
   </tal:block>
+  <script type="text/javascript"
+      tal:attributes="src string:./ftwcalendar_config.js"></script>
+  <div id="calendar"></div>
 
-  <div id="main" tal:define="dates python:view.get_data();"
-    tal:repeat="date dates;">
-    <span tal:content="date"></span>
-  </div>
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <!-- <script  tal:attributes="src string:${navroot}/++plone++collective.realestate/react.development.js"></script> -->
-  <!-- <script  tal:attributes="src string:${navroot}/++plone++collective.realestate/react-dom.development.js"></script> -->
-  <!-- <script tal:attributes="src string:${navroot}/++plone++collective.realestate/realestate-react.js"></script> -->
-  <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> -->
-  <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin="crossorigin"></script> -->
-  <!-- <script defer src="https://code.getmdl.io/1.2.1/material.min.js" crossorigin="crossorigin"></script> -->
-  <!-- <script src="https://use.fontawesome.com/f757ed9a8c.js" crossorigin="crossorigin"></script> -->
-  <!-- <script src="https://unpkg.com/react@15.3.1/dist/react.js" crossorigin="crossorigin"></script> -->
-  <!-- <script src="https://unpkg.com/react-dom@15.3.1/dist/react-dom.js" crossorigin="crossorigin"></script> -->
-  <!-- <script src="https://unpkg.com/react-booking-calendar@1.0.3/lib/index.js" crossorigin="crossorigin"></script> -->
-  <!--script>
-    const date = new Date();
-    const currentYear = date.getFullYear();
-    const currentMonth = date.getMonth();
-    ReactDOM.render(React.createElement(BookingCalendar, {
-      bookings: [
-        new Date(currentYear, currentMonth, 3),
-        new Date(currentYear, currentMonth, 4),
-        new Date(currentYear, currentMonth, 5),
-        new Date(currentYear, currentMonth, 6),
-        new Date(currentYear, currentMonth, 7),
-        new Date(currentYear, currentMonth, 8),
-        new Date(currentYear, currentMonth, 9),
-        new Date(currentYear, currentMonth, 10),
-        new Date(currentYear, currentMonth, 19),
-        new Date(currentYear, currentMonth, 20),
-        new Date(currentYear, currentMonth, 21),
-        new Date(currentYear, currentMonth, 22),
-        new Date(currentYear, currentMonth, 23),
-      ]
-    }), document.getElementById('main'));
-  </script-->
 
 </div>

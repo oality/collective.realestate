@@ -10,11 +10,11 @@
     <metal:content-core fill-slot="content-core">
       <metal:block define-macro="content-core">
 
-        <div class="geolocation_wrapper"
+        <div id="geojson"
              tal:define="
                 view nocall:context/@@faceted-single-map-view;
-                json view/json;"
-             tal:attributes="data-json json">
+                geojson view/json;"
+             tal:attributes="data-geojson geojson">
 
         </div>
 

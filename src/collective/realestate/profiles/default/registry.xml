@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <registry>
+  <record name="collective.autoscaling.interfaces.ICollectiveAutoscalingSettings.image_max_width">
+    <value>2000</value>
+  </record>
+  <record name="collective.autoscaling.interfaces.ICollectiveAutoscalingSettings.image_max_height">
+    <value>1200</value>
+  </record>
+
+
   <!-- -*- extra stuff goes here -*- -->
   <!-- select widget -->
   <records prefix="plone.resources/faceted-widgets-intselect-view" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
@@ -65,26 +73,25 @@
 
   <records prefix="plone.bundles/bundle-leaflet-faceted" interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
+      <element>leaflet</element>
+      <element>leaflet-fullscreen</element>
+      <element>leaflet-providers</element>
+      <element>leaflet-geosearch</element>
+      <element>leaflet-geosearch-esri</element>
+      <element>leaflet-geosearch-openstreetmap</element>
+      <element>leaflet-markercluster</element>
+      <element>leaflet-awesomemarkers</element>
+      <element>leaflet-locatecontrol</element>
+      <element>leaflet-minimap</element>
+      <element>leaflet-sleep</element>
+      <element>leaflet-simplemarkers</element>
       <element>bundle-leaflet-faceted</element>
     </value>
-    <value key="depends">plone</value>
+    <value key="depends"></value>
     <value key="jscompilation">++plone++static/bundle-leaflet-faceted-compiled.min.js</value>
     <value key="csscompilation">++plone++static/bundle-leaflet-faceted-compiled.css</value>
-    <value key="compile">True</value>
+    <value key="compile">False</value>
     <value key="enabled">True</value>
     <value key="last_compilation"></value>
-    <value key="stub_js_modules">
-      <element>jquery.form</element>
-      <element>jquery</element>
-      <element>pat-base</element>
-      <element>pat-compat</element>
-      <element>pat-logger</element>
-      <element>pat-mockup-parser</element>
-      <element>pat-registry</element>
-      <element>pat-utils</element>
-      <element>select2</element>
-      <element>underscore</element>
-      <element>moment</element>
-    </value>
   </records>
 </registry>
