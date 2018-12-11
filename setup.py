@@ -59,6 +59,7 @@ setup(
         'collective.geolocationbehavior',
         'plone.formwidget.captcha',
         'ftw.calendar',
+        'collective.autoscaling',
     ],
     extras_require={
         'test': [
