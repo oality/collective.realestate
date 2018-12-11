@@ -16,6 +16,8 @@ class RealEstateView(BrowserView):
 
     def get_data_geojson(self):
         widget = GeolocationWidget(self.request)
+        if not getattr(self.context, 'geolocation'):
+            return ''
         widget.value = (
             self.context.geolocation.latitude,
             self.context.geolocation.longitude
@@ -24,6 +26,8 @@ class RealEstateView(BrowserView):
         return widget.data_geojson
 
     def get_geo_values(self):
+        if not getattr(self.context, 'geolocation'):
+            return ('', '')
         return (
             self.context.geolocation.latitude,
             self.context.geolocation.longitude

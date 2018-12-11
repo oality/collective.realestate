@@ -5,6 +5,9 @@
   <include package="plone.app.imagecropping" />
   <include package="collective.behavior.banner" />
   <include package="collective.behavior.gallery" />
+  <include package="collective.geolocationbehavior" />
+  <include package="ftw.calendar" />
+  <include package="collective.autoscaling" />
 
 
   <!--genericsetup:registerProfile
