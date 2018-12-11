@@ -1,15 +1,11 @@
 
 <div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
 
-  <tal:block define="view nocall:context/ftwcalendar_view">
+  <tal:block>
     <legend i18n:translate="Bookings">Bookings</legend>
-    <!-- <tal:macro define="listing_macro view/macros/listing|view/index/macros/listing">
-      <metal:use_macro use-macro="listing_macro"/>
-
-    </tal:macro> -->
-  </tal:block>
-  <script type="text/javascript"
+    <script type="text/javascript"
       tal:attributes="src string:./ftwcalendar_config.js"></script>
-  <div id="calendar"></div>
+      <div id="calendar"></div>
+  </tal:block>
 
 </div>
