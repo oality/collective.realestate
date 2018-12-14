@@ -20,6 +20,9 @@ class BookingsViewlet(ViewletBase):
 
     index = ViewPageTemplateFile('bookings.pt')
 
+    def available(self):
+        return self.context.is_rent()
+
     def get_data(self):
         # import ipdb; ipdb.set_trace()
         dates = []

@@ -6,75 +6,76 @@
   i18n:domain="collective.realestate"
   metal:use-macro="context/main_template/macros/master">
 
-  <!-- <metal:styleslot fill-slot="style_slot">
-    <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
-  </metal:styleslot>
-  <metal:script fill-slot="javascript_head_slot">
-    <script type="text/javascript" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="src string:${navroot}/++plone++collective.realestate/realestate.js"></script>
-  </metal:script> -->
+  <!-- <metal:styleslot fill-slot="style_slot"> <link type="text/css" rel="stylesheet" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="href string:${navroot}/++plone++collective.realestate/realestate.css"/>
+  </metal:styleslot> <metal:script fill-slot="javascript_head_slot"> <script type="text/javascript" tal:define="navroot context/@@plone_portal_state/navigation_root_url" tal:attributes="src
+  string:${navroot}/++plone++collective.realestate/realestate.js"></script> </metal:script> -->
   <body>
     <!-- <metal:content fill-slot="main"> -->
-    <metal:content-description fill-slot="content-description"></metal:content-description>
+    <!-- <metal:content-description fill-slot="content-description"></metal:content-description> -->
     <metal:content fill-slot="content-core">
 
-      <div tal:condition="context/is_sale" class="price row">
-        <div class="regular-price" tal:content="structure context/get_formatted_price"></div>
-      </div>
-      <legend class="row" i18n:translate="Equipment">Equipment</legend>
-      <div class="figures row" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
-        <div i18n:attributes="title" title="Persons"
-          class="col-xs-6 col-sm-4 col-lg-3 users text-center" tal:condition="context/persons" >
-          <div class="icon"><img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/person.svg" /></div>
-          <span tal:content="context/persons"></span>
+      <div class="row informations">
+        <div class="price col-xs-6 col-sm-4 col-lg-4">
+          <div class="regular-price" tal:content="structure context/get_formatted_price"></div>
         </div>
-        <div i18n:attributes="title" title="Bedomms"
-          class="col-xs-6 col-sm-4 col-lg-3 bedrooms text-center" tal:condition="context/rooms">
-          <div class="icon"><img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/bedroom.svg" /></div>
-          <!-- <span i18n:translate="Bedomms">Bedomms</span> -->
-          <span tal:content="context/rooms"></span>
+
+        <div class="figures col-xs-6 col-sm-4 col-lg-4">
+          <!-- <legend class="row" i18n:translate="Equipment">Equipment</legend> -->
+          <div class="row">
+            <div i18n:attributes="title" title="Persons" class="col-xs-12 col-sm-6 col-lg-6  users text-center" tal:condition="context/persons">
+              <span class="icon-users" tal:content="context/persons"></span>
+            </div>
+            <div i18n:attributes="title" title="Bedomms" class="col-xs-12 col-sm-6 col-lg-6 bedrooms text-center" tal:condition="context/rooms">
+              <span class="icon-bed" tal:content="context/rooms"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div i18n:attributes="title" title="Bathrooms" class="col-xs-12 col-sm-6 col-lg-6 bathrooms text-center" tal:condition="context/bathrooms">
+              <span class="icon-bath" tal:content="context/bathrooms"></span>
+            </div>
+            <div i18n:attributes="title" title="Area" class="col-xs-12 col-sm-6 col-lg-6 area text-center" tal:condition="context/area">
+              <span class="icon-resize-full-1" tal:content="context/area"></span>
+              <span>m²</span>
+            </div>
+          </div>
         </div>
-        <div i18n:attributes="title" title="Bathrooms"
-          class="col-xs-6 col-sm-4 col-lg-3 bathrooms text-center" tal:condition="context/bathrooms">
-          <div class="icon"><img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/bathroom.svg" /></div>
-          <span tal:content="context/bathrooms"></span>
+
+        <div id="priceandrequest" tal:condition="context/is_sale" class="col-xs-6 col-sm-4 col-lg-4">
+          <form tal:attributes="action string:${context/absolute_url}/info-request" method="get" id="request-booking">
+            <button type="submit" form="request-booking" class="btn btn-outline-primary" i18n:translate="Request">Request</button>
+          </form>
         </div>
-        <div i18n:attributes="title" title="Area"
-          class="col-xs-6 col-sm-4 col-lg-3 area text-center" tal:condition="context/area">
-          <div class="icon"><img tal:attributes="src string:${navroot}/++plone++collective.realestate/img/size.svg" /></div>
-          <span tal:content="context/area"></span>
-          <span>m²</span>
+        <div id="priceandrequest" tal:condition="context/is_rent" class="col-xs-6 col-sm-4 col-lg-4">
+          <!-- <div i18n:translate="price">
+            <span>Price is between
+              <span i18n:name="low_price" tal:replace="context/get_low_price"></span>
+              &euro; and
+              <span i18n:name="high_price" tal:replace="context/get_high_price"></span>
+              &euro;
+            </span>
+          </div> -->
+          <form tal:attributes="action string:${context/absolute_url}/booking-request" method="get" id="request-booking">
+            <button type="submit" form="request-booking" class="btn btn-outline-primary" i18n:translate="Request a booking">Request a booking</button>
+          </form>
         </div>
+
       </div>
       <div class="visualClear"></div>
       <legend class="row" i18n:translate="Description">Description du bien</legend>
       <div class="visualClear"></div>
       <div class="row" tal:condition="context/text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
       <div class="visualClear"></div>
-      <div id="priceandrequest" tal:condition="context/is_sale" class="card text-right">
-        <form tal:attributes="action string:${context/absolute_url}/info-request" method="get" id="request-booking">
-          <button type="submit" form="request-booking" class="btn btn-outline-primary" i18n:translate="Request">Request</button>
-        </form>
-      </div>
-      <div id="priceandrequest" tal:condition="context/is_rent" class="card text-right">
-        <div i18n:translate="price">
-          <span>Price is between
-            <span i18n:name="low_price" tal:replace="context/get_low_price"></span>
-            &euro; and
-            <span i18n:name="high_price" tal:replace="context/get_high_price"></span>
-            &euro;
-          </span>
-        </div>
-      <form tal:attributes="action string:${context/absolute_url}/booking-request" method="get" id="request-booking">
-        <button type="submit" form="request-booking" class="btn btn-outline-primary" i18n:translate="Request a booking">Request a booking</button>
-      </form>
-      </div>
+
       <legend class="row" i18n:translate="Address">Adresse</legend>
       <div class="row" tal:content="structure context/get_formatted_address">address
       </div>
       <div class="visualClear"></div>
       <div class="row geolocation">
         <div class="geolocation_wrapper" tal:condition="view/get_geo_values">
-          <div class="pat-leaflet map" tal:attributes="data-geojson view/get_data_geojson" data-pat-leaflet='{
+          <div
+            class="pat-leaflet map"
+            tal:attributes="data-geojson view/get_data_geojson"
+            data-pat-leaflet='{
             "fullscreencontrol": true,
             "locatecontrol": true,
             "zoomcontrol": true,

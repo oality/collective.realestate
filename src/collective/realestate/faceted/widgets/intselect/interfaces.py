@@ -20,6 +20,12 @@ class IIntselectSchema(ISchema):
         required=False
     )
 
+    title2 = schema.TextLine(
+        title=_(u'Default input text'),
+        description=_(u'Default text to display in select box'),
+        required=False
+    )
+
     sortreversed = schema.Bool(
         title=_(u'Reverse options'),
         description=_(u'Sort options reversed'),
@@ -32,6 +38,7 @@ class DefaultSchemata(DS):
     """
     fields = field.Fields(IIntselectSchema).select(
         u'title',
+        u'title2',
         u'index',
         u'text',
         u'default'

@@ -34,24 +34,20 @@
     <div class="figures row">
     <div i18n:attributes="title" title="Persons"
       class="col-xs-6 col-sm-4 col-lg-3 users" tal:condition="context/persons" >
-      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/img/person.svg">
-      <div tal:content="context/persons"></div>
+      <div class="icon-users" tal:content="context/persons"></div>
     </div>
     <div i18n:attributes="title" title="Bedrooms"
       class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms">
-      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/img/bedroom.svg">
-      <div tal:content="context/rooms"></div>
+      <div class="icon-bed" tal:content="context/rooms"></div>
     </div>
     <div i18n:attributes="title" title="Bathrooms"
       class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms">
-      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/img/bathroom.svg">
-      <div tal:content="context/bathrooms"></div>
+      <div class="icon-bath" tal:content="context/bathrooms"></div>
     </div>
     <div i18n:attributes="title" title="Area"
       class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area">
-      <img style="height:25px;" tal:attributes="src string:${navroot}/++plone++collective.realestate/img/size.svg">
       <div>
-        <span>
+        <span class="icon-resize-full-1">
           <span tal:replace="context/area"></span>
           m²
         </span>

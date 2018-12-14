@@ -1,4 +1,59 @@
 /* our custom styles */
+#faceted-form fieldset {
+    border-color: white;
+    border-width: 0px;
+}
+#top-area, .informations{
+  min-height: 7em;
+  height: auto;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-color: #d9d7d7;
+  background-size: 20px 20px;
+}
+#top-area legend {
+  color: #777777;
+}
+.figures .row div span::before {
+  padding-right: 1.5em;
+}
+#priceandrequest button {
+  color: #fff;
+  background-color: #dd693c;
+  border-color: #b2b2b2;
+  padding: 12px 24px;
+}
+#top-area .faceted-widget.faceted-criteria-widget {
+    box-sizing: border-box;
+    clear: left;
+    float: left;
+    margin-top: 1em;
+    padding-bottom: 0em;
+    padding-left: 1em;
+    padding-top: 0em;
+    position: relative;
+    width: 100%;
+}
+.widget-fieldset legend {
+    border-bottom: 0px solid #e5e5e5;
+    width: auto;
+    padding-right: 1em;
+}
+.intrangediv {
+  padding-left: 0px;
+}
+#faceted-form .faceted-intrange-widget fieldset {
+  padding: 10px;
+}
+#faceted-form .faceted-intrange-widget input {
+  width: 150px;
+}
+.mosaic-tile-content .documentFirstHeading {
+  border-bottom: 0px solid #ffffff;
+  text-align: center;
+}
+#faceted-form .widget-fieldset legend {
+    float: left;
+}
 .pat-leaflet-faceted {
   min-height: 400px;
 }
@@ -16,8 +71,7 @@
 }
 
 .price {
-  background-color: #eeeeee;
-  padding: 0.7em;
+  padding: 2em;
   display: flex;
 }
 
@@ -31,8 +85,8 @@
 }
 .regular-price {
   background-color: #6ac875;
-  color: #fff;
-  font-size: 30px;
+  color: #ffffff;
+  font-size: 25px;
   display: inline-block;
   padding: 12px 24px;
 }
@@ -92,7 +146,17 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-
+.faceted-intrange-widget .intrangediv {
+  width: 100%;
+}
+@media(min-width: 768px) {
+  .faceted-intrange-widget .intrangediv {
+    width: 48%;
+  }
+}
+.faceted-intrange-widget{
+  width: 50%;
+}
 .faceted-widget {
   position: relative;
   min-height: 1px;
@@ -103,17 +167,44 @@ body {
 }
 @media(min-width: 768px) {
   .faceted-widget {
+    width: 25%;
+  }
+}
+.faceted-intrange-widget {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .faceted-intrange-widget {
     width: 50%;
   }
 }
-
+.widget-fieldset-legend {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
 #content-core .bathrooms img {
   max-height: 66.6px;
 }
+#content header {
+  min-height: 200px;
+}
+.fc-event-time {
+  display: none;
+}
 
+.fc-event, .fc-agenda .fc-event-time, .fc-event a {
+    border-style: solid;
+    border-color: #cc4d33;
+    background-color: #dd693c;
+    color: #fff;
+}
+.fc-header-right {
+  display: none;
+}
 #priceandrequest {
   padding: 2em;
-  text-align: right;
+  text-align: center;
+  display: flex;
 }
 
 .figures {
@@ -187,7 +278,7 @@ body #content-core {
 }
 
 .price span {
-  padding: 0.5em;
+  padding: 2em;
 }
 
 .card {

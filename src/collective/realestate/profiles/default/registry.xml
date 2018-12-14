@@ -43,7 +43,7 @@
       <element>faceted-widgets-intrange-view</element>
       <element>faceted-widgets-intselect-view</element>
     </value>
-    <value key="depends">faceted-jquery</value>
+    <value key="depends">faceted-view</value>
     <value key="csscompilation">++plone++static/realestate-faceted-view.min.css</value>
     <value key="jscompilation">++plone++static/realestate-faceted-view.min.js</value>
     <value key="compile">False</value>

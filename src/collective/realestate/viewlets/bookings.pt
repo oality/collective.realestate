@@ -1,5 +1,6 @@
 
-<div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
+<div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:condition="view/available"
+     tal:define="navroot context/@@plone_portal_state/navigation_root_url">
 
   <tal:block>
     <legend i18n:translate="Bookings">Bookings</legend>
