@@ -33,19 +33,21 @@
     <div class="visualClear" />
     <div class="figures row">
     <div i18n:attributes="title" title="Persons"
-      class="col-xs-6 col-sm-4 col-lg-3 users" tal:condition="context/persons" >
+      class="col-xs-12 col-sm-6 col-lg-6 users" tal:condition="context/persons" >
       <div class="icon-users" tal:content="context/persons"></div>
     </div>
     <div i18n:attributes="title" title="Bedrooms"
-      class="col-xs-6 col-sm-4 col-lg-3 bedrooms" tal:condition="context/rooms">
+      class="col-xs-12 col-sm-6 col-lg-6 bedrooms" tal:condition="context/rooms">
       <div class="icon-bed" tal:content="context/rooms"></div>
     </div>
+    </div>
+    <div class="figures row">
     <div i18n:attributes="title" title="Bathrooms"
-      class="col-xs-6 col-sm-4 col-lg-3 bathrooms" tal:condition="context/bathrooms">
+      class="col-xs-12 col-sm-6 col-lg-6 bathrooms" tal:condition="context/bathrooms">
       <div class="icon-bath" tal:content="context/bathrooms"></div>
     </div>
     <div i18n:attributes="title" title="Area"
-      class="col-xs-6 col-sm-4 col-lg-3 area" tal:condition="context/area">
+      class="col-xs-12 col-sm-6 col-lg-6 area" tal:condition="context/area">
       <div>
         <span class="icon-resize-full-1">
           <span tal:replace="context/area"></span>
@@ -54,7 +56,7 @@
       </div>
     </div>
     </div>
-    <div class="row price text-center"><span class="col-x12"> <span tal:replace="structure price"></span></span></div>
+    <div class="row viewletprice text-center"><span class="col-x12"> <span tal:replace="structure price"></span></span></div>
 
 </tal:block>
 

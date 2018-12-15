@@ -74,7 +74,11 @@
   padding: 2em;
   display: flex;
 }
-
+.viewletprice {
+  color: #ffffff;
+  background-color: #6ac875;
+  font-size: large;
+}
 .row {
   margin-top: 15px;
 }
@@ -173,6 +177,7 @@ body {
   display: flex;
 }
 
+
 .figures {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -269,7 +274,7 @@ body #content-core {
   padding: 0;
 }
 #content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label {
-    background: #e0e0e0;
+    background: #eee;
     padding-top: 0.25em;
     box-sizing: border-box;
     display: inline-block;
@@ -281,16 +286,25 @@ body #content-core {
     color: #000000;
     float: left;
 }
-#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label.checked {
-  background: #fff;
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label:hover {
+    background: #ccc;
 }
-
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label.checked {
+  background: #ccc;
+}
+.eea-preview-items .figures div::before {
+    padding-right: 2em;
+}
 .faceted-widget.faceted-layout-widget.section-affichage label[title="Vue cartographique"]::before {
     content: "\e837";
     font-family: fontello;
     margin-right: 0.5em;
 }
 
+.eea-preview-items .figures {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
 #content #top-area .faceted-widget.faceted-layout-widget.section-affichage input {
     display: none;
 }

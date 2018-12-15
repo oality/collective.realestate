@@ -63,7 +63,7 @@ msgstr "Chambres"
 
 #: collective/realestate/faceted/views/realestate-item.pt:40
 msgid "Bedrooms"
-msgstr "Salles de bain"
+msgstr "Chambres""
 
 #: collective/realestate/profiles/default/types/Booking.xml
 msgid "Booking"
