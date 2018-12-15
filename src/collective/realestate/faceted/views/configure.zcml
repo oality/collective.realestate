@@ -7,7 +7,7 @@
   <faceted:view
     name="faceted-realestate-items"
     template="realestate-items.pt"
-    title="Faceted items realestate"
+    title="Affichage en liste"
     permission="zope2.View"
     />
 
@@ -21,7 +21,7 @@
   <faceted:view
     name="faceted-map-view"
     template="map.pt"
-    title="Faceted map view"
+    title="Affichage cartographique"
     permission="zope2.View"
     />
 

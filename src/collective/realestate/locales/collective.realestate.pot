@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-12-10 14:43+0000\n"
+"POT-Creation-Date: 2018-12-15 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,11 @@ msgstr ""
 msgid "Add booking date"
 msgstr ""
 
+#. Default: "Adresse"
+#: collective/realestate/browser/templates/real_estate_view.pt:69
+msgid "Address"
+msgstr ""
+
 #: collective/realestate/vocabularies/types.py:27
 msgid "Apartment"
 msgstr ""
@@ -45,9 +50,9 @@ msgstr ""
 msgid "Are pets authorised?"
 msgstr ""
 
-#: collective/realestate/browser/templates/real_estate_view.pt:39
+#: collective/realestate/browser/templates/real_estate_view.pt:36
 #: collective/realestate/content/real_estate.py:55
-#: collective/realestate/faceted/views/realestate-item.pt:50
+#: collective/realestate/faceted/views/realestate-item.pt:49
 msgid "Area"
 msgstr ""
 
@@ -55,21 +60,25 @@ msgstr ""
 msgid "Area in m²"
 msgstr ""
 
-#: collective/realestate/browser/templates/real_estate_view.pt:34
+#: collective/realestate/browser/templates/real_estate_view.pt:33
 #: collective/realestate/faceted/views/realestate-item.pt:45
 msgid "Bathrooms"
 msgstr ""
 
-#: collective/realestate/browser/templates/real_estate_view.pt:29
+#: collective/realestate/browser/templates/real_estate_view.pt:28
 msgid "Bedomms"
 msgstr ""
 
-#: collective/realestate/faceted/views/realestate-item.pt:40
+#: collective/realestate/faceted/views/realestate-item.pt:39
 msgid "Bedrooms"
 msgstr ""
 
 #: collective/realestate/profiles/default/types/Booking.xml
 msgid "Booking"
+msgstr ""
+
+#: collective/realestate/viewlets/bookings.pt:6
+msgid "Bookings"
 msgstr ""
 
 #: collective/realestate/browser/form.py:116
@@ -100,6 +109,19 @@ msgstr ""
 msgid "Default e-mail use to send request reservation."
 msgstr ""
 
+#: collective/realestate/faceted/widgets/intselect/interfaces.py:24
+msgid "Default input text"
+msgstr ""
+
+#: collective/realestate/faceted/widgets/intselect/interfaces.py:25
+msgid "Default text to display in select box"
+msgstr ""
+
+#. Default: "Description du bien"
+#: collective/realestate/browser/templates/real_estate_view.pt:64
+msgid "Description"
+msgstr ""
+
 #: collective/realestate/profiles/default/types/Booking.xml
 #: collective/realestate/profiles/default/types/Real_estate.xml
 msgid "Edit"
@@ -108,10 +130,6 @@ msgstr ""
 #: collective/realestate/browser/form.py:65
 #: collective/realestate/content/booking.py:18
 msgid "End of booking"
-msgstr ""
-
-#: collective/realestate/browser/templates/real_estate_view.pt:22
-msgid "Equipment"
 msgstr ""
 
 #: collective/realestate/faceted/views/configure.zcml:12
@@ -178,11 +196,11 @@ msgstr ""
 msgid "Marker icons"
 msgstr ""
 
-#: collective/realestate/faceted/widgets/intrange/widget.pt:28
+#: collective/realestate/faceted/widgets/intrange/widget.pt:29
 msgid "Maximum price"
 msgstr ""
 
-#: collective/realestate/faceted/widgets/intrange/widget.pt:20
+#: collective/realestate/faceted/widgets/intrange/widget.pt:19
 msgid "Minimum price"
 msgstr ""
 
@@ -206,7 +224,7 @@ msgstr ""
 msgid "Parking"
 msgstr ""
 
-#: collective/realestate/browser/templates/real_estate_view.pt:24
+#: collective/realestate/browser/templates/real_estate_view.pt:25
 #: collective/realestate/faceted/views/realestate-item.pt:35
 msgid "Persons"
 msgstr ""
@@ -237,11 +255,11 @@ msgid "Rent"
 msgstr ""
 
 #: collective/realestate/browser/form.py:83
-#: collective/realestate/browser/templates/real_estate_view.pt:53
+#: collective/realestate/browser/templates/real_estate_view.pt:45
 msgid "Request"
 msgstr ""
 
-#: collective/realestate/browser/templates/real_estate_view.pt:66
+#: collective/realestate/browser/templates/real_estate_view.pt:58
 msgid "Request a booking"
 msgstr ""
 
@@ -249,7 +267,7 @@ msgstr ""
 msgid "Request booking"
 msgstr ""
 
-#: collective/realestate/faceted/widgets/intselect/interfaces.py:24
+#: collective/realestate/faceted/widgets/intselect/interfaces.py:30
 msgid "Reverse options"
 msgstr ""
 
@@ -269,7 +287,7 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: collective/realestate/faceted/widgets/intselect/interfaces.py:25
+#: collective/realestate/faceted/widgets/intselect/interfaces.py:31
 msgid "Sort options reversed"
 msgstr ""
 
@@ -345,11 +363,6 @@ msgstr ""
 
 #: collective/realestate/browser/overrides/plone.app.standardtiles.templates.summary_view.pt:94
 msgid "last modified"
-msgstr ""
-
-#. Default: "<span>Price is between ${low_price} &euro; and ${high_price} &euro; </span>"
-#: collective/realestate/browser/templates/real_estate_view.pt:61
-msgid "price"
 msgstr ""
 
 #. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a request to book ${url}."
