@@ -98,40 +98,6 @@ body {
   color: #484d54;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 2px;
-  float: left;
-  text-align: center;
-  padding-top: 6px;
-  margin-right: 12px;
-}
-
-.icon img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-// image-grid-2x2:
-.image-grid-2x2 {
-  padding: 0;
-  margin: 0 0 @plone-grid-gutter-width;
-  list-style: none;
-  .make-row();
-
-  > li {
-    .make-xs-column(12);
-    .make-sm-column(6);
-    margin-top: @plone-grid-gutter-width;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
-}
-
 #portal-logo img {
   height: 100px;
 }
@@ -185,7 +151,7 @@ body {
 #content-core .bathrooms img {
   max-height: 66.6px;
 }
-#content header {
+.portaltype-real-estate #content header {
   min-height: 200px;
 }
 .fc-event-time {
@@ -279,6 +245,62 @@ body #content-core {
 
 .price span {
   padding: 2em;
+}
+
+.faceted-widget.faceted-layout-widget.section-affichage {
+    width: 100%;
+    min-height: 0;
+    margin: 0 0 0 0;
+    box-sizing: border-box;
+    padding-top: 0em;
+    padding-right: 0em;
+    padding-bottom: 1em;
+    padding-left: 0em;
+}
+.faceted-widget.faceted-layout-widget.section-affichage .widget-fieldset legend {
+  display: none;
+}
+#faceted-form .faceted-widget.faceted-layout-widget.section-affichage .widget-fieldset {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul  {
+  margin-bottom: 10px;
+  padding: 0;
+}
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label {
+    background: #e0e0e0;
+    padding-top: 0.25em;
+    box-sizing: border-box;
+    display: inline-block;
+    padding-bottom: 0.6em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    margin: 0;
+    width: 50%;
+    color: #000000;
+    float: left;
+}
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage ul li label.checked {
+  background: #fff;
+}
+
+.faceted-widget.faceted-layout-widget.section-affichage label[title="Vue cartographique"]::before {
+    content: "\e837";
+    font-family: fontello;
+    margin-right: 0.5em;
+}
+
+#content #top-area .faceted-widget.faceted-layout-widget.section-affichage input {
+    display: none;
+}
+.widget-fieldset ul li label {
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    padding: 0.3em 1em 0em 2.2em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .card {
