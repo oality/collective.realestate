@@ -16,5 +16,6 @@
     <dependency>profile-plone.formwidget.captcha:default</dependency>
     <dependency>profile-ftw.calendar:default</dependency>
     <dependency>profile-collective.autoscaling:default</dependency>
+    <dependency>profile-collective.disclaimer:default</dependency>
   </dependencies>
 </metadata>
