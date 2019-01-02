@@ -60,6 +60,8 @@ setup(
         'plone.formwidget.captcha',
         'ftw.calendar',
         'collective.autoscaling',
+        # 'collective.privacy',
+        'collective.disclaimer',
     ],
     extras_require={
         'test': [
