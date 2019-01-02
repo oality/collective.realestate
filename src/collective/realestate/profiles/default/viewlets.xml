@@ -5,4 +5,8 @@
     <viewlet name="collective.behavior.gallery.files" />
   </hidden>
 
+  <hidden manager="plone.portalheader" skinname="*">
+    <viewlet name="plone.searchbox" />
+  </hidden>
+
 </object>
