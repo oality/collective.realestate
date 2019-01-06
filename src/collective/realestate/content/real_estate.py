@@ -87,6 +87,8 @@ class RealEstate(Container):
 
     def get_formatted_price(self, days=7, devise='&euro;'):
         price = self.get_price(days)
+        if not self.price:
+            return None
         try:
             locale.setlocale(locale.LC_ALL, 'fr_BE.utf8')
             formatted_price = '{0} {1}'.format(
@@ -98,6 +100,8 @@ class RealEstate(Container):
         return formatted_price
 
     def get_price(self, days=7):
+        if not self.price:
+            return None
         if self.is_sale():
             return '{0:.0f}'.format(self.price)
         else:
