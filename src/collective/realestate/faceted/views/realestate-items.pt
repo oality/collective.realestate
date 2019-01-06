@@ -6,6 +6,15 @@
   i18n:domain="collective.realestate">
 
 <body>
+  hello
+  <metal:content-title fill-slot="content-title">
+    bsuttor
+  </metal:content-title>
+  <metal:content-description fill-slot="content-description">
+    <metal:block define-macro="content-description">
+      bsuttor
+    </metal:block>
+  </metal:content-description>
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="content-core">
       <div tal:define="

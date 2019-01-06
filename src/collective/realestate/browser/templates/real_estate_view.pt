@@ -70,7 +70,7 @@
       <div class="row" tal:content="structure context/get_formatted_address">address
       </div>
       <div class="visualClear"></div>
-      <div class="row geolocation" tal:condition="context/street">
+      <div class="row geolocation" tal:condition="context/street|nothing">
         <div class="geolocation_wrapper" tal:condition="view/get_geo_values">
           <div
             class="pat-leaflet map"
