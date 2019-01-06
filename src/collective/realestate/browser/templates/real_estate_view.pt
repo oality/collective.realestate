@@ -16,7 +16,7 @@
 
       <div class="row informations">
         <div class="price col-xs-6 col-sm-4 col-lg-4">
-          <div class="regular-price" tal:content="structure context/get_formatted_price"></div>
+          <div class="regular-price" tal:condition="context/price" tal:content="structure context/get_formatted_price"></div>
         </div>
 
         <div class="figures col-xs-6 col-sm-4 col-lg-4">
@@ -70,7 +70,7 @@
       <div class="row" tal:content="structure context/get_formatted_address">address
       </div>
       <div class="visualClear"></div>
-      <div class="row geolocation">
+      <div class="row geolocation" tal:condition="context/street">
         <div class="geolocation_wrapper" tal:condition="view/get_geo_values">
           <div
             class="pat-leaflet map"
