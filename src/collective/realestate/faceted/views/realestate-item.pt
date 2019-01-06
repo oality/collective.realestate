@@ -26,7 +26,7 @@
     <img class="card-img-top" style="border: none" tal:attributes="
         title desc_or_title;
         alt title;
-        src string:$url/@@images/image/mini"/>
+        src string:$url/@@images/image/large"/>
 
     <h5 class="card-title text-center" tal:content="context/pretty_title_or_id|string:">Title</h5>
     <span class="card-text text-center faceteddesc" tal:content="description">Description</span>
