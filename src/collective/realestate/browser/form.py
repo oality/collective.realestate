@@ -47,7 +47,10 @@ class IRequestForm(model.Schema):
         description=_(u'Your phone will be used only to take contact with you.'),  # noqa
         required=False,
     )
-
+    text = schema.Text(
+        title=_(u'Your questions or notices'),
+        required=False,
+    )
     captcha = schema.TextLine(
         title=_(u'Captcha'),
         required=False
@@ -80,7 +83,7 @@ class RequestForm(form.Form):
     ignoreContext = True
     email_view = 'request-email'
 
-    label = _(u"Request")  # noqa
+    label = _(u'Request')
     description = _(u'Form to make request')
 
     @button.buttonAndHandler(_(u'Send'))
@@ -103,7 +106,6 @@ class RequestForm(form.Form):
                 return
 
             # else;
-
 
         # Do something with valid data here
 
@@ -137,8 +139,12 @@ class RequestForm(form.Form):
         portal = api.portal.get()
         registry = getUtility(IRegistry)
         mail_settings = registry.forInterface(IMailSchema, prefix='plone')
-        send_to_address = mail_settings.email_from_address
-        from_address = mail_settings.email_from_address
+        send_to_address = api.portal.get_registry_record(
+            'collective.realestate.owner_email',
+        )
+        if not send_to_address:
+            send_to_address = mail_settings.email_from_address
+        from_address = send_to_address
         registry = getUtility(IRegistry)
         encoding = registry.get('plone.email_charset', 'utf-8')
         host = getToolByName(self.context, 'MailHost')
