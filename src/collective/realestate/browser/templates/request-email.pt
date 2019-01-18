@@ -11,12 +11,13 @@
               from_name python:context.portal_registry.get('plone.email_from_name', '');
               dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;;charset=%s' % charset);">
 
-  <div i18n:translate="site_feedback_mailtemplate_body" tal:omit-tag="">
+  <div i18n:translate="site_feedback_mailtemplate_request_body" tal:omit-tag="">
     You are receiving this mail because
     <span i18n:name="fullname" tal:omit-tag="" tal:content="options/name|nothing"/>
     <span i18n:name="from_address" tal:omit-tag="" tal:content="options/email"/>
     <span i18n:name="phone" tal:omit-tag="" tal:content="options/phone"/>
-    is sending a request to book
+    is sending a information request
     <span i18n:name="url" tal:replace="options/realestate_url"/>.
   </div>
+  <div tal:content="options/text"></div>
 </div>

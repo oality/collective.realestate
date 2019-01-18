@@ -19,4 +19,5 @@
     is sending a request to book
     <span i18n:name="url" tal:replace="options/realestate_url"/>.
   </div>
+  <div tal:content="options/text"></div>
 </div>
