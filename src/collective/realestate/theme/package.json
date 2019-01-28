@@ -1,8 +1,0 @@
-{
-  "//": "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
-  "name": "collective.realestate",
-  "version": "1.0.0",
-  "dependencies": {
-    "bootstrap": "^3.3.7"
-  }
-}

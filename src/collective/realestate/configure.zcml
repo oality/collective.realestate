@@ -47,11 +47,4 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-  <plone:static
-      directory="theme"
-      type="theme"
-      name="real-estate"
-      />
-
-
 </configure>
