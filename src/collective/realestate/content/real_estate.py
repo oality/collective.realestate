@@ -74,6 +74,12 @@ class IRealEstate(model.Schema):
         required=False
     )
 
+    sold = schema.Bool(
+        title=_(u'Sold ?'),
+        required=True,
+        default=False,
+    )
+
 
 @implementer(IRealEstate)
 class RealEstate(Container):

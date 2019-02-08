@@ -94,4 +94,21 @@
     <value key="enabled">True</value>
     <value key="last_compilation"></value>
   </records>
+
+  <records prefix="plone.resources/collective-realestate" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++plone++collective.realestate/collective-realestate.css</element>
+    </value>
+  </records>
+  <records prefix="plone.bundles/collective-realestate"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>collective-realestate</element>
+    </value>
+    <value key="enabled">True</value>
+    <value key="compile">False</value>
+    <value key="csscompilation">++resource++collective.realestate/collective-realestate-compile.css</value>
+    <value key="merge_with">default</value>
+  </records>
+
 </registry>

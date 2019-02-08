@@ -1,0 +1,14 @@
+div.sold {
+  position: absolute;
+  top: 33px;
+  left: -10px;
+  margin: auto 0;
+  transform: rotate(-45deg);
+  background: #ff0000;
+  color: #fff;
+  padding-top: 0em;
+  padding-right: 2em;
+  padding-bottom: 0m;
+  padding-left: 2em;
+  z-index: 100;
+}

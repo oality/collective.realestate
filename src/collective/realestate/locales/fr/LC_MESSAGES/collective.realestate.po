@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-18 14:51+0000\n"
+"POT-Creation-Date: 2019-02-05 13:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,7 +57,7 @@ msgstr "Les animaux domistiques sont-ils acceptés ?"
 
 #: ../browser/templates/real_estate_view.pt:36
 #: ../content/real_estate.py:55
-#: ../faceted/views/realestate-item.pt:49
+#: ../faceted/views/realestate-item.pt:54
 msgid "Area"
 msgstr "Superficie"
 
@@ -66,7 +66,7 @@ msgid "Area in mÂ²"
 msgstr "Superficie en m²"
 
 #: ../browser/templates/real_estate_view.pt:33
-#: ../faceted/views/realestate-item.pt:45
+#: ../faceted/views/realestate-item.pt:50
 msgid "Bathrooms"
 msgstr "Salles de bain"
 
@@ -74,7 +74,7 @@ msgstr "Salles de bain"
 msgid "Bedomms"
 msgstr "Chambres"
 
-#: ../faceted/views/realestate-item.pt:39
+#: ../faceted/views/realestate-item.pt:44
 msgid "Bedrooms"
 msgstr "Chambres"
 
@@ -222,7 +222,7 @@ msgid "Parking"
 msgstr "Parking"
 
 #: ../browser/templates/real_estate_view.pt:25
-#: ../faceted/views/realestate-item.pt:35
+#: ../faceted/views/realestate-item.pt:40
 msgid "Persons"
 msgstr "Personnes"
 
@@ -283,6 +283,14 @@ msgstr "A bientôt !"
 #: ../browser/form.py:89
 msgid "Send"
 msgstr "Envoyer"
+
+#: ../faceted/views/realestate-item.pt:33
+msgid "Sold"
+msgstr "Vendu"
+
+#: ../content/real_estate.py:78
+msgid "Sold ?"
+msgstr "Vendu ?"
 
 #: ../faceted/widgets/intselect/interfaces.py:31
 msgid "Sort options reversed"
