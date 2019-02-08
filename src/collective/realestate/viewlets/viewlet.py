@@ -21,7 +21,7 @@ class BookingsViewlet(ViewletBase):
     index = ViewPageTemplateFile('bookings.pt')
 
     def available(self):
-        return self.context.is_rent()
+        return self.context.is_rent() and not api.user.is_anonymous()
 
     def get_data(self):
         # import ipdb; ipdb.set_trace()
