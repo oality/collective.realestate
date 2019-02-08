@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
+from Acquisition import aq_base
+from cgi import escape
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
+from plone.app.layout.viewlets.common import TitleViewlet
+from plone.memoize.view import memoize
+from Products.CMFPlone.interfaces import IPloneSiteRoot
+from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.annotation.interfaces import IAnnotations
+from zope.component import getMultiAdapter
+from zope.i18n import translate
 
 
 class LeadimageViewlet(ViewletBase):
@@ -55,3 +63,30 @@ class MapViewlet(ViewletBase):
         if not view_name == 'faceted-map-view':
             return False
         return True
+
+
+class HeadTitle(TitleViewlet):
+
+    @property
+    @memoize
+    def page_title(self):
+        if (hasattr(aq_base(self.context), 'isTemporary') and
+                self.context.isTemporary()):
+            # if we are in the portal_factory we want the page title to be
+            # "Add fti title"
+            portal_types = api.portal.get_tool('portal_types')
+            fti = portal_types.getTypeInfo(self.context)
+            return translate('heading_add_item',
+                             domain='plone',
+                             mapping={'itemtype': fti.Title()},
+                             context=self.request,
+                             default='Add ${itemtype}')
+
+        # If we are on portal root, look up the portal title from registry
+        if (IPloneSiteRoot.providedBy(self.context) or
+                self.context.id.startswith('bienvenue-')):
+            return self.site_title_setting
+
+        context_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_context_state')
+        return escape(safe_unicode(context_state.object_title()))

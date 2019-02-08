@@ -27,7 +27,15 @@
     manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
     class=".viewlet.MapViewlet"
     layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
-    permission="zope2.View"/>
+    permission="zope2.View"
+    />
 
+  <browser:viewlet
+    name="collective.realestate.headtitle"
+    manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+    class="collective.realestate.viewlets.viewlet.HeadTitle"
+    layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
+    permission="zope2.View"
+    />
 
 </configure>
