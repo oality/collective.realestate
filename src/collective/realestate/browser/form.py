@@ -108,7 +108,7 @@ class RequestForm(form.Form):
             # else;
 
         # Do something with valid data here
-
+        # data['site_title'] = api.portal.get_registry_record('plone.site_title')
         # Set status on this form page
         # (this status message is not bind to the session and does not go thru redirects)
         self.send_message(data)

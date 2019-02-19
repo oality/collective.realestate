@@ -12,3 +12,31 @@ div.sold {
   padding-left: 2em;
   z-index: 100;
 }
+.figures .row div span::before {
+  padding-right: 1.5em;
+}
+#priceandrequest button {
+  color: #fff;
+  background-color: #dd693c;
+  border-color: #b2b2b2;
+  padding: 12px 24px;
+}
+#top-area, .informations{
+  min-height: 7em;
+  height: auto;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
+  background-color: #d9d7d7;
+  background-size: 20px 20px;
+}
+.figures .row div span::before {
+  padding-right: 1.5em;
+}
+.figures {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+#gallery-photos, #files-viewlet {
+  margin-top: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
