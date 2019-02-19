@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-02-05 13:50+0000\n"
+"POT-Creation-Date: 2019-02-19 11:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,6 +78,7 @@ msgstr "Chambres"
 msgid "Bedrooms"
 msgstr "Chambres"
 
+#: ../browser/templates/booking-request-email.pt:44
 #: ../profiles/default/types/Booking.xml
 msgid "Booking"
 msgstr "Réservation"
@@ -101,6 +102,21 @@ msgstr "Index du catalog"
 #: ../faceted/widgets/intrange/interfaces.py:17
 msgid "Catalog index to use for search"
 msgstr "Index du catalog utilisé pour la recherche"
+
+#: ../browser/templates/booking-request-email.pt:25
+#: ../browser/templates/request-email.pt:25
+msgid "Contact email"
+msgstr "E-mail de la personne demandant des informations"
+
+#: ../browser/templates/booking-request-email.pt:20
+#: ../browser/templates/request-email.pt:20
+msgid "Contact name"
+msgstr "Nom de la personne demandant des informations"
+
+#: ../browser/templates/booking-request-email.pt:30
+#: ../browser/templates/request-email.pt:30
+msgid "Contact phone"
+msgstr "Téléphone de la personne demandant des informations"
 
 #: ../browser/controlpanel.py:24
 msgid "Date like 01/07 for first July"
@@ -144,6 +160,10 @@ msgstr "Formulaire de demande d'information"
 #: ../browser/form.py:178
 msgid "Form to make request booking"
 msgstr "Formulaire de demande de réservation"
+
+#: ../browser/templates/booking-request-email.pt:45
+msgid "From"
+msgstr "Du"
 
 #: ../vocabularies/types.py:29
 msgid "Garage"
@@ -197,6 +217,11 @@ msgstr "Icone pour le marqueur"
 msgid "Maximum price"
 msgstr "Prix maximum"
 
+#: ../browser/templates/booking-request-email.pt:40
+#: ../browser/templates/request-email.pt:40
+msgid "Message"
+msgstr "Message"
+
 #: ../faceted/widgets/intrange/widget.pt:19
 msgid "Minimum price"
 msgstr "Prix minimum"
@@ -243,6 +268,8 @@ msgid "Real Estate settings"
 msgstr "Paramètres du module de bien immobilier"
 
 #. Default: "Real estate"
+#: ../browser/templates/booking-request-email.pt:35
+#: ../browser/templates/request-email.pt:35
 #: ../profiles/default/types/Real_estate.xml
 msgid "Real estate"
 msgstr "Bien immobilier"
@@ -313,6 +340,10 @@ msgstr "Texte à afficher après le nombre dans le 'select box'"
 msgid "This text is added below all real estate."
 msgstr "Ce text est ajouté en-dessous de la ficher des biens immobilier"
 
+#: ../browser/templates/booking-request-email.pt:47
+msgid "To"
+msgstr "au"
+
 #: ../content/real_estate.py:30
 msgid "Type of real estate"
 msgstr "Type de bien"
@@ -374,12 +405,8 @@ msgstr "collective.realestate (désinstallation)"
 msgid "last modified"
 msgstr "Dernière modification"
 
-#. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a request to book ${url}."
-#: ../browser/templates/booking-request-email.pt:20
+#. Default: "You are receiving this mail from"
+#: ../browser/templates/booking-request-email.pt:15
+#: ../browser/templates/request-email.pt:15
 msgid "site_feedback_mailtemplate_body"
-msgstr "You recevez cet e-mail car ${fullname} ${from_address} ${phone} fait un demande de réservation pour ${url}."
-
-#. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a information request ${url}."
-#: ../browser/templates/request-email.pt:20
-msgid "site_feedback_mailtemplate_request_body"
-msgstr "You recevez cet e-mail car ${fullname} ${from_address} ${phone} fait un demande d'information pour ${url}."
+msgstr "Vous recevez cet e-mail car une demande a été faire sur le site suivant :"

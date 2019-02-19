@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-02-05 13:50+0000\n"
+"POT-Creation-Date: 2019-02-19 11:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,6 +78,7 @@ msgstr ""
 msgid "Bedrooms"
 msgstr ""
 
+#: ../browser/templates/booking-request-email.pt:44
 #: ../profiles/default/types/Booking.xml
 msgid "Booking"
 msgstr ""
@@ -100,6 +101,21 @@ msgstr ""
 
 #: ../faceted/widgets/intrange/interfaces.py:17
 msgid "Catalog index to use for search"
+msgstr ""
+
+#: ../browser/templates/booking-request-email.pt:25
+#: ../browser/templates/request-email.pt:25
+msgid "Contact email"
+msgstr ""
+
+#: ../browser/templates/booking-request-email.pt:20
+#: ../browser/templates/request-email.pt:20
+msgid "Contact name"
+msgstr ""
+
+#: ../browser/templates/booking-request-email.pt:30
+#: ../browser/templates/request-email.pt:30
+msgid "Contact phone"
 msgstr ""
 
 #: ../browser/controlpanel.py:24
@@ -143,6 +159,10 @@ msgstr ""
 
 #: ../browser/form.py:178
 msgid "Form to make request booking"
+msgstr ""
+
+#: ../browser/templates/booking-request-email.pt:45
+msgid "From"
 msgstr ""
 
 #: ../vocabularies/types.py:29
@@ -197,6 +217,11 @@ msgstr ""
 msgid "Maximum price"
 msgstr ""
 
+#: ../browser/templates/booking-request-email.pt:40
+#: ../browser/templates/request-email.pt:40
+msgid "Message"
+msgstr ""
+
 #: ../faceted/widgets/intrange/widget.pt:19
 msgid "Minimum price"
 msgstr ""
@@ -243,6 +268,8 @@ msgid "Real Estate settings"
 msgstr ""
 
 #. Default: "Real estate"
+#: ../browser/templates/booking-request-email.pt:35
+#: ../browser/templates/request-email.pt:35
 #: ../profiles/default/types/Real_estate.xml
 msgid "Real estate"
 msgstr ""
@@ -313,6 +340,10 @@ msgstr ""
 msgid "This text is added below all real estate."
 msgstr ""
 
+#: ../browser/templates/booking-request-email.pt:47
+msgid "To"
+msgstr ""
+
 #: ../content/real_estate.py:30
 msgid "Type of real estate"
 msgstr ""
@@ -374,12 +405,8 @@ msgstr ""
 msgid "last modified"
 msgstr ""
 
-#. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a request to book ${url}."
-#: ../browser/templates/booking-request-email.pt:20
+#. Default: "You are receiving this mail from"
+#: ../browser/templates/booking-request-email.pt:15
+#: ../browser/templates/request-email.pt:15
 msgid "site_feedback_mailtemplate_body"
-msgstr ""
-
-#. Default: "You are receiving this mail because ${fullname} ${from_address} ${phone} is sending a information request ${url}."
-#: ../browser/templates/request-email.pt:20
-msgid "site_feedback_mailtemplate_request_body"
 msgstr ""
