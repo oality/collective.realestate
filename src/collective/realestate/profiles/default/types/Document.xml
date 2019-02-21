@@ -3,7 +3,9 @@
     name="Document"
     meta_type="Dexterity FTI"
     i18n:domain="collective.realestate">
-
+  <property name="view_methods" purge="false">
+    <element value="booking-view"/>
+  </property>
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
     <element value="collective.behavior.banner.banner.IBanner" />

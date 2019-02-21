@@ -12,44 +12,39 @@ div.sold {
   padding-left: 2em;
   z-index: 100;
 }
+
 .figures .row div span::before {
   padding-right: 1.5em;
 }
+
 #priceandrequest button {
   color: #fff;
   background-color: #dd693c;
   border-color: #b2b2b2;
   padding: 12px 24px;
 }
-#top-area, .informations{
+
+#top-area, .informations {
   min-height: 7em;
   height: auto;
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 14%, transparent 14%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 64%, transparent 64%, transparent);
   background-color: #d9d7d7;
   background-size: 20px 20px;
 }
+
 .figures .row div span::before {
   padding-right: 1.5em;
 }
+
 .figures {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
 #gallery-photos, #files-viewlet {
   margin-top: 15px;
   margin-left: -15px;
   margin-right: -15px;
-}
-
-.fc-event-time {
-  display: none;
-}
-
-.fc-event, .fc-agenda .fc-event-time, .fc-event a {
-  border-style: solid;
-  border-color: #cc4d33;
-  background-color: #dd693c;
-  color: #fff;
 }
 
 /* .fc-header .fc-state-default, .fc-header .fc-state-default a {
@@ -61,41 +56,55 @@ table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table
 /* .fc-widget-content {
 	border: 0px solid #ccc;
 } */
-
-table > tbody > tr > td,
-table > tbody > tr > th,
-table > tfoot > tr > td,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > thead > tr > th {
+table>tbody>tr>td,
+table>tbody>tr>th,
+table>tfoot>tr>td,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>thead>tr>th {
   border: 0 solid #e5e5e5;
 }
+
 // .fc-widget-content {
 //   border: 0 solid #ccc;
 //   /* outer border color */
 // }
-
-.fc-header {
+#calendar .fc-header {
   text-align: center;
 }
 
-.fc-header table {
+#calendar .fc-header table {
   border: 0 solid #e5e5e5;
 }
 
-.fc-header-right {
+#calendar .fc-header-right {
   display: none;
 }
 
-.fc-agenda .fc-event-time,
-.fc-event,
-.fc-event a {
+#calendar .fc-agenda .fc-event-time,
+#calendar .fc-event,
+#calendar .fc-event a {
   border-style: solid;
   border-color: #cc4d33;
   background-color: #dd693c;
   color: #fff;
 }
 
-.fc-event-time {
+#calendar .fc-event-time {
   display: none;
+}
+
+.request-booking-view {
+  float: right;
+}
+
+.request-booking-view button {
+  color: #fff;
+  background-color: #dd693c;
+  border-color: #b2b2b2;
+  padding: 12px 24px;
+}
+
+.portaltype-document #bookings-viewlet {
+  padding-top: 4em;
 }

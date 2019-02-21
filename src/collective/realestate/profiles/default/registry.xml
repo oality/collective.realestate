@@ -108,7 +108,6 @@
     <value key="enabled">True</value>
     <value key="compile">False</value>
     <value key="csscompilation">++plone++collective.realestate/collective-realestate-compile.css</value>
-    <value key="merge_with">default</value>
   </records>
 
   <records prefix="plone.resources/collective-realestate-font" interface='Products.CMFPlone.interfaces.IResourceRegistry'>

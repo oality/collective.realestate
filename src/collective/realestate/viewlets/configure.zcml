@@ -13,6 +13,15 @@
     layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
     />
 
+  <browser:viewlet
+    for="plone.app.contenttypes.interfaces.IDocument"
+    name="collective.realestate.bookings"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+    class=".viewlet.BookingsViewlet"
+    permission="zope.Public"
+    layer="collective.realestate.interfaces.ICollectiveRealestateLayer"
+    />
+
    <browser:viewlet
      for="collective.realestate.content.real_estate.IRealEstate"
      name="collective.realestate.condition"

@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from Acquisition import aq_base
 from cgi import escape
+from collective.realestate.utils import get_first_realestate_obj
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 from plone import api
+from plone.app.contenttypes.interfaces import IDocument
 from plone.app.layout.viewlets import ViewletBase
 from plone.app.layout.viewlets.common import TitleViewlet
 from plone.memoize.view import memoize
@@ -29,12 +31,23 @@ class BookingsViewlet(ViewletBase):
     index = ViewPageTemplateFile('bookings.pt')
 
     def available(self):
-        return self.context.is_rent() and not api.user.is_anonymous()
+        if api.user.is_anonymous():
+            return False
+        if IDocument.providedBy(self.context):
+            return self.context.layout == 'booking-view'
+        else:
+            return self.context.is_rent()
+
+    def realestate_obj(self):
+        if IDocument.providedBy(self.context):
+            return get_first_realestate_obj()
+        else:
+            return self.context
 
     def get_data(self):
-        # import ipdb; ipdb.set_trace()
         dates = []
-        brains = api.content.find(context=self.context, portal_type='Booking')
+        brains = api.content.find(
+            context=self.realestate_obj(), portal_type='Booking')
         for brain in brains:
             obj_dates = brain.getObject().get_all_dates()
             dates += obj_dates

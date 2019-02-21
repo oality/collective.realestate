@@ -85,4 +85,21 @@
     layer="..interfaces.ICollectiveRealestateLayer"
     />
 
+  <browser:page
+    name="booking-view"
+    for="plone.app.contenttypes.interfaces.IDocument"
+    class=".booking_view.BookingView"
+    template="templates/booking_view.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <adapter
+    for="plone.app.contenttypes.interfaces.IDocument
+         zope.publisher.interfaces.browser.IBrowserRequest"
+    name="ftw_calendar_source"
+    provides="ftw.calendar.browser.interfaces.IFtwCalendarJSONSourceProvider"
+    factory=".adapters.RealEstateCalendarJSONSource"
+    />
+
 </configure>

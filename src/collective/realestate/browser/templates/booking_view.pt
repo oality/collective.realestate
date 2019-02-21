@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="collective.realestate"
+      metal:use-macro="context/main_template/macros/master">
+<body>
+    <metal:block fill-slot="content-core">
+      <div id="parent-fieldname-text"
+          tal:condition="context/text"
+          tal:content="structure python:context.text.output_relative_to(view.context)"
+          />
+      <form tal:attributes="action python:view.realestate_obj_form_url()" method="get" id="request-booking" class="request-booking-view">
+        <button type="submit" form="request-booking" class="btn btn-outline-primary" i18n:translate="Request a booking">Request a booking</button>
+      </form>
+    </metal:block>
+
+<body>
+</html>
