@@ -76,4 +76,13 @@
     layer="..interfaces.ICollectiveRealestateLayer"
     />
 
+  <browser:page
+    for="collective.realestate.content.real_estate.IRealEstate"
+    name="ftwcalendar_config.js"
+    class="ftw.calendar.browser.calendar_config.CalendarConfigView"
+    template="templates/calendar_config.pt"
+    permission="zope.Public"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
 </configure>

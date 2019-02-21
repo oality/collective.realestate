@@ -10,6 +10,11 @@ from zope.interface import implementer
 class IBooking(model.Schema):
     """ Marker interface for Booking
     """
+    title = schema.TextLine(
+        title=_(u"Customer's name"),
+        required=False,
+    )
+
     start = schema.Date(
         title=_(u'Start of booking'),
     )
