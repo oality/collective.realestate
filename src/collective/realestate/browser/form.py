@@ -115,7 +115,7 @@ class RequestForm(form.Form):
         message = _(u'Your request has been send to the owner')
         self.status = message
         api.portal.show_message(
-            message=message, request=self.request, type='error')
+            message=message, request=self.request, type='info')
         self.request.response.redirect(self.context.absolute_url())
 
     @button.buttonAndHandler(_(u'Cancel'))
