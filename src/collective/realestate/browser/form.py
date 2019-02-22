@@ -112,7 +112,10 @@ class RequestForm(form.Form):
         # Set status on this form page
         # (this status message is not bind to the session and does not go thru redirects)
         self.send_message(data)
-        self.status = _(u'Your request has been send to the owner')
+        message = _(u'Your request has been send to the owner')
+        self.status = message
+        api.portal.show_message(
+            message=message, request=self.request, type='error')
         self.request.response.redirect(self.context.absolute_url())
 
     @button.buttonAndHandler(_(u'Cancel'))
@@ -129,7 +132,7 @@ class RequestForm(form.Form):
 
     def message(self, data, encoding):
         message = self.generate_mail(data, encoding)
-        message = MIMEText(message, 'plain', encoding)
+        message = MIMEText(message, 'html', encoding)
         message['Reply-To'] = data['email']
         return message
 

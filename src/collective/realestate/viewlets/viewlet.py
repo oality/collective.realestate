@@ -34,7 +34,8 @@ class BookingsViewlet(ViewletBase):
         if api.user.is_anonymous():
             return False
         if IDocument.providedBy(self.context):
-            return self.context.layout == 'booking-view'
+
+            return getattr(self.context, 'layout', '') == 'booking-view'
         else:
             return self.context.is_rent()
 

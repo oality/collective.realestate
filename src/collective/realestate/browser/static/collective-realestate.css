@@ -96,6 +96,7 @@ table>thead>tr>th {
 
 .request-booking-view {
   float: right;
+  padding-bottom: 3em;
 }
 
 .request-booking-view button {
