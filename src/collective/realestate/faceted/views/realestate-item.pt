@@ -61,7 +61,11 @@
       </div>
     </div>
     </div>
-    <div class="row viewletprice text-center"><span class="col-x12"> <span tal:replace="structure price"></span></span></div>
+    <div class="row viewletprice text-center"
+         tal:attributes="class python:sold and 'row viewletprice text-center pricesold' or 'row viewletprice text-center'">
+      <span class="col-x12 span-price">
+      <span tal:replace="structure price"></span></span>
+    </div>
 
 </tal:block>
 

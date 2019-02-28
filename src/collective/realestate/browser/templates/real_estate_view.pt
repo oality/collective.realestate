@@ -15,6 +15,9 @@
     <metal:content fill-slot="content-core">
 
       <div class="row informations">
+        <div class="issold" tal:condition="context/sold">
+          <b i18n:translate="Sold">Sold</b>
+        </div>
         <div class="price col-xs-6 col-sm-4 col-lg-4" tal:condition="context/price">
           <div class="regular-price" tal:content="structure context/get_formatted_price"></div>
         </div>

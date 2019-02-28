@@ -13,6 +13,33 @@ div.sold {
   z-index: 100;
 }
 
+.issold {
+  background: #ff0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 30px;
+}
+.price {
+  padding: 2em;
+  display: flex;
+}
+
+.viewletprice {
+  color: #ffffff;
+  background-color: #6ac875;
+  font-size: large;
+  min-height: 1.5em;
+}
+
+.viewletprice.pricesold {
+  background-color: transparent;
+}
+
+.span-price {
+  min-height: 1.5em;
+}
+
 .figures .row div span::before {
   padding-right: 1.5em;
 }
