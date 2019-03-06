@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-02-19 11:25+0000\n"
+"POT-Creation-Date: 2019-03-06 14:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,12 +22,16 @@ msgstr ""
 msgid "(from ${start} to ${end})"
 msgstr ""
 
-#: ../browser/controlpanel.py:25
+#: ../browser/controlpanel.py:23
 msgid "01/07"
 msgstr ""
 
-#: ../browser/controlpanel.py:31
+#: ../browser/controlpanel.py:30
 msgid "01/10"
+msgstr ""
+
+#: ../browser/booking_view.py:12
+msgid "A small message"
 msgstr ""
 
 #: ../profiles/default/types/Booking.xml
@@ -35,7 +39,7 @@ msgid "Add booking date"
 msgstr ""
 
 #. Default: "Adresse"
-#: ../browser/templates/real_estate_view.pt:69
+#: ../browser/templates/real_estate_view.pt:64
 msgid "Address"
 msgstr ""
 
@@ -55,7 +59,7 @@ msgstr ""
 msgid "Are pets authorised?"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:36
+#: ../browser/templates/real_estate_view.pt:39
 #: ../content/real_estate.py:55
 #: ../faceted/views/realestate-item.pt:54
 msgid "Area"
@@ -65,12 +69,12 @@ msgstr ""
 msgid "Area in mÂ²"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:33
+#: ../browser/templates/real_estate_view.pt:36
 #: ../faceted/views/realestate-item.pt:50
 msgid "Bathrooms"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:28
+#: ../browser/templates/real_estate_view.pt:31
 msgid "Bedomms"
 msgstr ""
 
@@ -83,11 +87,11 @@ msgstr ""
 msgid "Booking"
 msgstr ""
 
-#: ../viewlets/bookings.pt:6
+#: ../viewlets/bookings.pt:15
 msgid "Bookings"
 msgstr ""
 
-#: ../browser/form.py:118
+#: ../browser/form.py:121
 msgid "Cancel"
 msgstr ""
 
@@ -118,15 +122,19 @@ msgstr ""
 msgid "Contact phone"
 msgstr ""
 
-#: ../browser/controlpanel.py:24
+#: ../content/booking.py:14
+msgid "Customer's name"
+msgstr ""
+
+#: ../browser/controlpanel.py:22
 msgid "Date like 01/07 for first July"
 msgstr ""
 
-#: ../browser/controlpanel.py:30
+#: ../browser/controlpanel.py:29
 msgid "Date like 01/10 for first October"
 msgstr ""
 
-#: ../browser/controlpanel.py:19
+#: ../browser/controlpanel.py:17
 msgid "Default e-mail use to send request reservation."
 msgstr ""
 
@@ -139,7 +147,7 @@ msgid "Default text to display in select box"
 msgstr ""
 
 #. Default: "Description du bien"
-#: ../browser/templates/real_estate_view.pt:64
+#: ../browser/templates/real_estate_view.pt:59
 msgid "Description"
 msgstr ""
 
@@ -149,7 +157,7 @@ msgid "Edit"
 msgstr ""
 
 #: ../browser/form.py:68
-#: ../content/booking.py:18
+#: ../content/booking.py:23
 msgid "End of booking"
 msgstr ""
 
@@ -157,7 +165,7 @@ msgstr ""
 msgid "Form to make request"
 msgstr ""
 
-#: ../browser/form.py:178
+#: ../browser/form.py:181
 msgid "Form to make request booking"
 msgstr ""
 
@@ -169,11 +177,11 @@ msgstr ""
 msgid "Garage"
 msgstr ""
 
-#: ../browser/controlpanel.py:36
+#: ../browser/controlpanel.py:37
 msgid "General condition"
 msgstr ""
 
-#: ../browser/controlpanel.py:23
+#: ../browser/controlpanel.py:21
 msgid "High season starting"
 msgstr ""
 
@@ -197,11 +205,11 @@ msgstr ""
 msgid "Is there a free parking"
 msgstr ""
 
-#: ../browser/controlpanel.py:45
+#: ../browser/controlpanel.py:47
 msgid "Latitude"
 msgstr ""
 
-#: ../browser/controlpanel.py:46
+#: ../browser/controlpanel.py:48
 msgid "Longitude"
 msgstr ""
 
@@ -209,7 +217,7 @@ msgstr ""
 msgid "Lots / Land"
 msgstr ""
 
-#: ../browser/controlpanel.py:41
+#: ../browser/controlpanel.py:43
 msgid "Marker icons"
 msgstr ""
 
@@ -238,7 +246,7 @@ msgstr ""
 msgid "Number of person(s)"
 msgstr ""
 
-#: ../browser/controlpanel.py:18
+#: ../browser/controlpanel.py:16
 msgid "Owner e-mail"
 msgstr ""
 
@@ -246,7 +254,7 @@ msgstr ""
 msgid "Parking"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:25
+#: ../browser/templates/real_estate_view.pt:28
 #: ../faceted/views/realestate-item.pt:40
 msgid "Persons"
 msgstr ""
@@ -260,10 +268,11 @@ msgid "Price"
 msgstr ""
 
 #: ../browser/overrides/plone.app.standardtiles.templates.summary_view.pt:111
+#: ../browser/templates/tile_collection_realestate_view.pt:51
 msgid "Read More&hellip;"
 msgstr ""
 
-#: ../browser/controlpanel.py:55
+#: ../browser/controlpanel.py:57
 msgid "Real Estate settings"
 msgstr ""
 
@@ -279,15 +288,16 @@ msgid "Rent"
 msgstr ""
 
 #: ../browser/form.py:86
-#: ../browser/templates/real_estate_view.pt:45
+#: ../browser/templates/real_estate_view.pt:48
 msgid "Request"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:58
+#: ../browser/templates/booking_view.pt:14
+#: ../browser/templates/real_estate_view.pt:53
 msgid "Request a booking"
 msgstr ""
 
-#: ../browser/form.py:137
+#: ../browser/form.py:140
 msgid "Request booking"
 msgstr ""
 
@@ -303,7 +313,7 @@ msgstr ""
 msgid "Sale or rent?"
 msgstr ""
 
-#: ../browser/form.py:122
+#: ../browser/form.py:125
 msgid "See you next time!"
 msgstr ""
 
@@ -311,7 +321,9 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: ../faceted/views/realestate-item.pt:33
+#: ../browser/templates/collection_view.pt:40
+#: ../browser/templates/real_estate_view.pt:19
+#: ../browser/templates/tile_collection_realestate_view.pt:41
 msgid "Sold"
 msgstr ""
 
@@ -324,7 +336,7 @@ msgid "Sort options reversed"
 msgstr ""
 
 #: ../browser/form.py:64
-#: ../content/booking.py:14
+#: ../content/booking.py:19
 msgid "Start of booking"
 msgstr ""
 
@@ -336,7 +348,7 @@ msgstr ""
 msgid "Text to display after number in select box"
 msgstr ""
 
-#: ../browser/controlpanel.py:37
+#: ../browser/controlpanel.py:38
 msgid "This text is added below all real estate."
 msgstr ""
 
@@ -348,7 +360,7 @@ msgstr ""
 msgid "Type of real estate"
 msgstr ""
 
-#: ../browser/form.py:167
+#: ../browser/form.py:170
 msgid "Unable to send mail: ${exception}"
 msgstr ""
 
@@ -356,7 +368,7 @@ msgstr ""
 msgid "Uninstalls the collective.realestate add-on."
 msgstr ""
 
-#: ../browser/controlpanel.py:42
+#: ../browser/controlpanel.py:44
 msgid "Update marker path."
 msgstr ""
 
@@ -403,6 +415,11 @@ msgstr ""
 
 #: ../browser/overrides/plone.app.standardtiles.templates.summary_view.pt:94
 msgid "last modified"
+msgstr ""
+
+#. Default: "Read More…"
+#: ../browser/templates/collection_view.pt:50
+msgid "read_more"
 msgstr ""
 
 #. Default: "You are receiving this mail from"
