@@ -13,6 +13,12 @@ div.sold {
   z-index: 100;
 }
 
+.tileCollectionSold div.sold {
+  top: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
 .issold {
   background: #ff0000;
   color: #ffffff;
@@ -20,6 +26,7 @@ div.sold {
   padding: 0.5em;
   font-size: 30px;
 }
+
 .price {
   padding: 2em;
   display: flex;
