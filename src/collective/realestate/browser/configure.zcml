@@ -102,4 +102,20 @@
     factory=".adapters.RealEstateCalendarJSONSource"
     />
 
+  <browser:page
+    name="collection-realestate-view"
+    for="plone.app.contenttypes.interfaces.ICollection"
+    template="templates/collection_view.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICollectiveRealestateLayer"
+    />
+
+  <browser:page
+    name="tile_realestate_view"
+    for="*"
+    layer="plone.app.standardtiles.contentlisting.IContentListingTileLayer"
+    permission="zope2.View"
+    template="templates/tile_collection_realestate_view.pt"
+    />
+
 </configure>

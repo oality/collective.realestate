@@ -125,4 +125,14 @@
     <value key="csscompilation">++plone++collective.realestate/collective-realestate-font-compile.css</value>
   </records>
 
+  <record name="plone.app.standardtiles.listing_views">
+    <!-- <field type="plone.registry.field.Dict">
+      <title>Listing Views</title>
+      <key_type type="plone.registry.field.TextLine" />
+      <value_type type="plone.registry.field.TextLine" />
+    </field> -->
+    <value purge="false">
+      <element key="tile_realestate_view">Real Estate view</element>
+    </value>
+  </record>
 </registry>
