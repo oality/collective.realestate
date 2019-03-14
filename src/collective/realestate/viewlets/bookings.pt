@@ -7,11 +7,10 @@
 
 </style>
 
-<div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:condition="view/available"
-     tal:define="navroot context/@@plone_portal_state/navigation_root_url;
-                 context_url python:view.realestate_obj().absolute_url();">
+<div class="row" id="bookings-viewlet" i18n:domain="collective.realestate" tal:condition="view/available">
 
-  <tal:block>
+  <tal:block tal:define="navroot context/@@plone_portal_state/navigation_root_url;
+              context_url python:view.realestate_obj().absolute_url();">
     <legend i18n:translate="Bookings">Bookings</legend>
     <script type="text/javascript"
       tal:attributes="src string:${context_url}/ftwcalendar_config.js"></script>
