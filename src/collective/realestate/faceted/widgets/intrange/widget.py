@@ -11,11 +11,12 @@ from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 class Widget(AbstractWidget):
     """ Widget
     """
-    widget_type = 'intrange'
-    widget_label = _('Int range field')
+
+    widget_type = "intrange"
+    widget_label = _("Int range field")
 
     groups = (DefaultSchemata, LayoutSchemata)
-    index = ViewPageTemplateFile('widget.pt')
+    index = ViewPageTemplateFile("widget.pt")
 
     # @property
     # def css_class(self):
@@ -27,12 +28,12 @@ class Widget(AbstractWidget):
     def default(self):
         """ Return default
         """
-        default = self.data.get('default', '')
+        default = self.data.get("default", "")
         if not default:
-            return ('', '')
-        default = default.split('=>')
+            return ("", "")
+        default = default.split("=>")
         if len(default) != 2:
-            return ('', '')
+            return ("", "")
 
         min, max = default
         return (min, max)
@@ -43,15 +44,16 @@ class Widget(AbstractWidget):
         query = {}
 
         # import ipdb; ipdb.set_trace()
-        index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        index = self.data.get("index", "")
+        index = index.encode("utf-8", "replace")
+        value = None
         if not index:
             return query
 
         if self.hidden:
             min, max = self.default
         else:
-            value = form.get(self.data.getId(), '')
+            value = form.get(self.data.getId(), "")
             if not value or len(value) != 2:
                 return query
             min, max = [int(x) if x else 0 for x in value]
@@ -62,12 +64,12 @@ class Widget(AbstractWidget):
         # portal_catalog({'price':{'query':[2,1000],'range':'min:max'}})
         if min and not max:
             value = min
-            range = 'min'
+            range = "min"
         elif max and not min:
             value = max
-            range = 'max'
+            range = "max"
         else:
             value = [min, max]
-            range = 'min:max'
-        query[index] = {'query': value, 'range': range}
+            range = "min:max"
+        query[index] = {"query": value, "range": range}
         return query

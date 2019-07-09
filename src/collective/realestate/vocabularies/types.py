@@ -24,19 +24,14 @@ class RealEstateTypes(object):
 
         terms = []
         types = {
-            'appart': _(u'Apartment'),
-            'house': _(u'House / Villa'),
-            'garage': _(u'Garage'),
-            'lots': _(u'Lots / Land'),
+            "appart": _(u"Apartment"),
+            "house": _(u"House / Villa"),
+            "garage": _(u"Garage"),
+            "lots": _(u"Lots / Land"),
+            "businesses": _(u"Businesses"),
         }
         for id, item in types.items():
-            terms.append(
-                SimpleTerm(
-                    value=id,
-                    token=id,
-                    title=item,
-                )
-            )
+            terms.append(SimpleTerm(value=id, token=id, title=item))
         return SimpleVocabulary(terms)
 
 

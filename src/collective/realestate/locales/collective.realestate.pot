@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-03-06 14:54+0000\n"
+"POT-Creation-Date: 2019-07-09 13:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgid "Add booking date"
 msgstr ""
 
 #. Default: "Adresse"
-#: ../browser/templates/real_estate_view.pt:64
+#: ../browser/templates/real_estate_view.pt:73
 msgid "Address"
 msgstr ""
 
@@ -58,26 +58,26 @@ msgstr ""
 msgid "Apartment"
 msgstr ""
 
-#: ../content/real_estate.py:68
+#: ../content/real_estate.py:57
 msgid "Are pets authorised?"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:39
-#: ../content/real_estate.py:55
+#: ../browser/templates/real_estate_view.pt:48
+#: ../content/real_estate.py:50
 #: ../faceted/views/realestate-item.pt:54
 msgid "Area"
 msgstr ""
 
-#: ../content/real_estate.py:56
+#: ../content/real_estate.py:50
 msgid "Area in mÂ²"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:36
+#: ../browser/templates/real_estate_view.pt:45
 #: ../faceted/views/realestate-item.pt:50
 msgid "Bathrooms"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:31
+#: ../browser/templates/real_estate_view.pt:40
 msgid "Bedomms"
 msgstr ""
 
@@ -90,8 +90,12 @@ msgstr ""
 msgid "Booking"
 msgstr ""
 
-#: ../viewlets/bookings.pt:15
+#: ../viewlets/bookings.pt:14
 msgid "Bookings"
+msgstr ""
+
+#: ../vocabularies/types.py:31
+msgid "Businesses"
 msgstr ""
 
 #: ../browser/form.py:121
@@ -150,7 +154,7 @@ msgid "Default text to display in select box"
 msgstr ""
 
 #. Default: "Description du bien"
-#: ../browser/templates/real_estate_view.pt:59
+#: ../browser/templates/real_estate_view.pt:68
 msgid "Description"
 msgstr ""
 
@@ -200,11 +204,11 @@ msgstr ""
 msgid "Int Select"
 msgstr ""
 
-#: ../faceted/widgets/intrange/widget.py:15
+#: ../faceted/widgets/intrange/widget.py:16
 msgid "Int range field"
 msgstr ""
 
-#: ../content/real_estate.py:62
+#: ../content/real_estate.py:53
 msgid "Is there a free parking"
 msgstr ""
 
@@ -237,15 +241,20 @@ msgstr ""
 msgid "Minimum price"
 msgstr ""
 
-#: ../content/real_estate.py:50
+#: ../browser/templates/real_estate_view.pt:22
+#: ../content/real_estate.py:62
+msgid "New"
+msgstr ""
+
+#: ../content/real_estate.py:48
 msgid "Number of bathroom(s)"
 msgstr ""
 
-#: ../content/real_estate.py:45
+#: ../content/real_estate.py:46
 msgid "Number of bedroom(s)"
 msgstr ""
 
-#: ../content/real_estate.py:40
+#: ../content/real_estate.py:44
 msgid "Number of person(s)"
 msgstr ""
 
@@ -253,20 +262,20 @@ msgstr ""
 msgid "Owner e-mail"
 msgstr ""
 
-#: ../content/real_estate.py:61
+#: ../content/real_estate.py:53
 msgid "Parking"
 msgstr ""
 
-#: ../browser/templates/real_estate_view.pt:28
+#: ../browser/templates/real_estate_view.pt:37
 #: ../faceted/views/realestate-item.pt:40
 msgid "Persons"
 msgstr ""
 
-#: ../content/real_estate.py:67
+#: ../content/real_estate.py:57
 msgid "Pets"
 msgstr ""
 
-#: ../content/real_estate.py:73
+#: ../content/real_estate.py:60
 msgid "Price"
 msgstr ""
 
@@ -285,17 +294,21 @@ msgstr ""
 msgid "Real estate"
 msgstr ""
 
+#: ../content/real_estate.py:42
+msgid "Reference"
+msgstr ""
+
 #: ../vocabularies/for.py:28
 msgid "Rent"
 msgstr ""
 
 #: ../browser/form.py:86
-#: ../browser/templates/real_estate_view.pt:48
+#: ../browser/templates/real_estate_view.pt:57
 msgid "Request"
 msgstr ""
 
 #: ../browser/templates/booking_view.pt:14
-#: ../browser/templates/real_estate_view.pt:53
+#: ../browser/templates/real_estate_view.pt:62
 msgid "Request a booking"
 msgstr ""
 
@@ -311,7 +324,7 @@ msgstr ""
 msgid "Sale"
 msgstr ""
 
-#: ../content/real_estate.py:26
+#: ../content/real_estate.py:30
 msgid "Sale or rent?"
 msgstr ""
 
@@ -324,12 +337,12 @@ msgid "Send"
 msgstr ""
 
 #: ../browser/templates/collection_view.pt:40
-#: ../browser/templates/real_estate_view.pt:19
+#: ../browser/templates/real_estate_view.pt:28
 #: ../browser/templates/tile_collection_realestate_view.pt:41
 msgid "Sold"
 msgstr ""
 
-#: ../content/real_estate.py:78
+#: ../content/real_estate.py:64
 msgid "Sold ?"
 msgstr ""
 
@@ -358,7 +371,7 @@ msgstr ""
 msgid "To"
 msgstr ""
 
-#: ../content/real_estate.py:30
+#: ../content/real_estate.py:33
 msgid "Type of real estate"
 msgstr ""
 
@@ -422,6 +435,11 @@ msgstr ""
 #. Default: "Read More…"
 #: ../browser/templates/collection_view.pt:50
 msgid "read_more"
+msgstr ""
+
+#. Default: "Reference:"
+#: ../browser/templates/real_estate_view.pt:19
+msgid "reference:"
 msgstr ""
 
 #. Default: "You are receiving this mail from"

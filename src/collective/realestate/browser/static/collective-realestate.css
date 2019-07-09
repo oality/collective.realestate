@@ -143,3 +143,29 @@ table>thead>tr>th {
 .portaltype-document #bookings-viewlet {
   padding-top: 4em;
 }
+
+.new {
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  background: #ff0000;
+  color: #ffffff;
+  text-align: right;
+  padding: 0.3em;
+  //float: right;
+  font-size: 15px;
+}
+
+.tileCollectionNew div.new {
+  top: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.reference {
+  float: left;
+}
+
+
+
+

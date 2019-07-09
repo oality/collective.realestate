@@ -14,6 +14,15 @@
     <!-- <metal:content-description fill-slot="content-description"></metal:content-description> -->
     <metal:content fill-slot="content-core">
 
+      <div class="row">
+        <div class="reference" tal:condition="context/reference">
+          <span i18n:translate="reference:">Reference:</span> <div tal:replace="context/reference"></div>
+        </div>
+      <div class="new" tal:condition="context/new">
+        <div i18n:translate="New">New</div>
+      </div>
+      </div>
+
       <div class="row informations">
         <div class="issold" tal:condition="context/sold">
           <b i18n:translate="Sold">Sold</b>

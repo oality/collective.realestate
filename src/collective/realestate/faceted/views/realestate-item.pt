@@ -10,6 +10,7 @@
       rooms context/rooms|string:;
       price context/get_formatted_price;
       sold context/sold;
+      new context/new;
       desc_or_title python:description or title;
       url context/absolute_url|string:#;
       view_url python:(url and useView and url + '/view') or url;
@@ -32,6 +33,10 @@
       <!-- <div class="sold" tal:content="sold">Sold</div> -->
       <div class="sold" i18n:translate="Sold">Sold</div>
     </tal:sold>
+
+    <tal:new tal:condition="new">
+      <div class="new" i18n:translate="New">New</div>
+    </tal:new>
 
     <h5 class="card-title text-center" tal:content="context/pretty_title_or_id|string:">Title</h5>
     <span class="card-text text-center faceteddesc" tal:content="description">Description</span>

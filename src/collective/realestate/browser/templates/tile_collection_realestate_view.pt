@@ -40,6 +40,10 @@
           <div class="tileSold" tal:condition="item/sold">
             <div class="sold" i18n:translate="Sold">Sold</div>
           </div>
+          <div class="tileCollectionNew" tal:condition="item/new">
+            <div class="new" i18n:translate="New">New</div>
+          </div>
+
           <p class="tileBody"
              tal:condition="item_description">
             <span class="description"
