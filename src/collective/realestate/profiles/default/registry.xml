@@ -24,6 +24,20 @@
     <value key="js">++resource++collective.realestate.faceted.widgets.intselect.edit.js</value>
   </records>
 
+  <records prefix="plone.resources/faceted-widgets-moreorless-view" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.realestate.faceted.widgets.moreorless.view.css</element>
+    </value>
+    <value key="js">++resource++collective.realestate.faceted.widgets.moreorless.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-moreorless-edit" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++collective.realestate.faceted.widgets.moreorless.edit.css</element>
+    </value>
+    <value key="js">++resource++collective.realestate.faceted.widgets.moreorless.edit.js</value>
+  </records>
+
   <records prefix="plone.resources/faceted-widgets-intrange-view" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
     <value key="css">
       <element>++resource++collective.realestate.faceted.widgets.intrange.view.css</element>
@@ -41,6 +55,7 @@
   <records prefix="plone.bundles/realestate-faceted-view" interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
       <element>faceted-widgets-intrange-view</element>
+      <element>faceted-widgets-moreorless-view</element>
       <element>faceted-widgets-intselect-view</element>
     </value>
     <value key="depends">faceted-view</value>

@@ -14,44 +14,41 @@ from zope import schema
 class IIntselectSchema(ISchema):
     """ Schema
     """
+
     text = schema.TextLine(
-        title=_(u'Text to display after number'),
-        description=_(u'Text to display after number in select box'),
-        required=False
+        title=_(u"Text to display after number"),
+        description=_(u"Text to display after number in select box"),
+        required=False,
     )
 
     title2 = schema.TextLine(
-        title=_(u'Default input text'),
-        description=_(u'Default text to display in select box'),
-        required=False
+        title=_(u"Default input text"),
+        description=_(u"Default text to display in select box"),
+        required=False,
     )
 
     sortreversed = schema.Bool(
-        title=_(u'Reverse options'),
-        description=_(u'Sort options reversed'),
-        required=False
+        title=_(u"Reverse options"),
+        description=_(u"Sort options reversed"),
+        required=False,
     )
 
 
 class DefaultSchemata(DS):
     """ Schemata default
     """
+
     fields = field.Fields(IIntselectSchema).select(
-        u'title',
-        u'title2',
-        u'index',
-        u'text',
-        u'default'
+        u"title", u"title2", u"index", u"text", u"default"
     )
 
 
 class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = u'display'
-    fields = field.Fields(IIntselectSchema).select(
-        u'sortreversed',
-    )
+
+    label = u"display"
+    fields = field.Fields(IIntselectSchema).select(u"sortreversed")
 
 
 __all__ = [
