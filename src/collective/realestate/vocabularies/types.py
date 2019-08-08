@@ -29,6 +29,7 @@ class RealEstateTypes(object):
             "garage": _(u"Garage"),
             "lots": _(u"Lots / Land"),
             "businesses": _(u"Businesses"),
+            "new": _(u"New real estate"),
         }
         for id, item in types.items():
             terms.append(SimpleTerm(value=id, token=id, title=item))
