@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-07-09 13:39+0000\n"
+"POT-Creation-Date: 2019-08-08 08:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgstr "Les animaux domistiques sont-ils acceptés ?"
 
 #: ../browser/templates/real_estate_view.pt:48
 #: ../content/real_estate.py:50
-#: ../faceted/views/realestate-item.pt:54
+#: ../faceted/views/realestate-item.pt:59
 msgid "Area"
 msgstr "Superficie"
 
@@ -70,7 +70,7 @@ msgid "Area in mÂ²"
 msgstr "Superficie en m²"
 
 #: ../browser/templates/real_estate_view.pt:45
-#: ../faceted/views/realestate-item.pt:50
+#: ../faceted/views/realestate-item.pt:55
 msgid "Bathrooms"
 msgstr "Salles de bain"
 
@@ -78,7 +78,7 @@ msgstr "Salles de bain"
 msgid "Bedomms"
 msgstr "Chambres"
 
-#: ../faceted/views/realestate-item.pt:44
+#: ../faceted/views/realestate-item.pt:49
 msgid "Bedrooms"
 msgstr "Chambres"
 
@@ -104,10 +104,12 @@ msgid "Captcha"
 msgstr "Captcha"
 
 #: ../faceted/widgets/intrange/interfaces.py:16
+#: ../faceted/widgets/moreorless/interfaces.py:18
 msgid "Catalog index"
 msgstr "Index du catalog"
 
 #: ../faceted/widgets/intrange/interfaces.py:17
+#: ../faceted/widgets/moreorless/interfaces.py:19
 msgid "Catalog index to use for search"
 msgstr "Index du catalog utilisé pour la recherche"
 
@@ -142,11 +144,11 @@ msgstr "Mettre 01/10 pour le premier octobre"
 msgid "Default e-mail use to send request reservation."
 msgstr "E-mail par defaut utilisé pour demander une réservation"
 
-#: ../faceted/widgets/intselect/interfaces.py:24
+#: ../faceted/widgets/intselect/interfaces.py:25
 msgid "Default input text"
 msgstr "Message par defaut"
 
-#: ../faceted/widgets/intselect/interfaces.py:25
+#: ../faceted/widgets/intselect/interfaces.py:26
 msgid "Default text to display in select box"
 msgstr "Text affiché dans la selection"
 
@@ -238,10 +240,27 @@ msgstr "Message"
 msgid "Minimum price"
 msgstr "Prix minimum"
 
+#: ../faceted/widgets/moreorless/interfaces.py:25
+msgid "More or less"
+msgstr "Plus ou moins"
+
+#: ../faceted/widgets/moreorless/widget.py:17
+msgid "More or less field"
+msgstr "Champ plus ou moins"
+
+#: ../faceted/widgets/moreorless/interfaces.py:26
+msgid "More or less than field value"
+msgstr "Plus ou moins que la valeur du champ"
+
+#: ../browser/templates/collection_view.pt:43
 #: ../browser/templates/real_estate_view.pt:22
-#: ../content/real_estate.py:62
+#: ../browser/templates/tile_collection_realestate_view.pt:44
 msgid "New"
 msgstr "Nouveau"
+
+#: ../vocabularies/types.py:32
+msgid "New real estate"
+msgstr "Nouvelle construction"
 
 #: ../content/real_estate.py:48
 msgid "Number of bathroom(s)"
@@ -264,7 +283,7 @@ msgid "Parking"
 msgstr "Parking"
 
 #: ../browser/templates/real_estate_view.pt:37
-#: ../faceted/views/realestate-item.pt:40
+#: ../faceted/views/realestate-item.pt:45
 msgid "Persons"
 msgstr "Personnes"
 
@@ -277,7 +296,7 @@ msgid "Price"
 msgstr "Prix"
 
 #: ../browser/overrides/plone.app.standardtiles.templates.summary_view.pt:111
-#: ../browser/templates/tile_collection_realestate_view.pt:51
+#: ../browser/templates/tile_collection_realestate_view.pt:55
 msgid "Read More&hellip;"
 msgstr "En savoir plus&hellip;"
 
@@ -314,7 +333,7 @@ msgstr "Demande de réservation"
 msgid "Request booking"
 msgstr "Demande de réservation"
 
-#: ../faceted/widgets/intselect/interfaces.py:30
+#: ../faceted/widgets/intselect/interfaces.py:31
 msgid "Reverse options"
 msgstr "Inverser"
 
@@ -344,7 +363,7 @@ msgstr "Vendu"
 msgid "Sold ?"
 msgstr "Vendu ?"
 
-#: ../faceted/widgets/intselect/interfaces.py:31
+#: ../faceted/widgets/intselect/interfaces.py:32
 msgid "Sort options reversed"
 msgstr "Inverser le tri"
 
@@ -353,11 +372,11 @@ msgstr "Inverser le tri"
 msgid "Start of booking"
 msgstr "Début de la réservation"
 
-#: ../faceted/widgets/intselect/interfaces.py:18
+#: ../faceted/widgets/intselect/interfaces.py:19
 msgid "Text to display after number"
 msgstr "Texte à afficher après le nombre"
 
-#: ../faceted/widgets/intselect/interfaces.py:19
+#: ../faceted/widgets/intselect/interfaces.py:20
 msgid "Text to display after number in select box"
 msgstr "Texte à afficher après le nombre dans le 'select box'"
 
@@ -431,7 +450,7 @@ msgid "last modified"
 msgstr "Dernière modification"
 
 #. Default: "Read More…"
-#: ../browser/templates/collection_view.pt:50
+#: ../browser/templates/collection_view.pt:53
 msgid "read_more"
 msgstr "En savoir plus..."
 
