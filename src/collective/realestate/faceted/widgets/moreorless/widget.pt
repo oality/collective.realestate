@@ -15,15 +15,13 @@
     tal:content="title">title</label>
 </legend>
 
-<form action="." method="get" class="faceted-moreorless-widget-form"
+<form action="." method="get"
   tal:on-error="structure python:error_view(error=error, cid=wid)">
-  <div class="faceted-widget moreorlessdiv" tal:attributes="id string:${wid}_moreorless;">
     <input size="10" type="text" tal:attributes="
       name string:${wid};
       id string:$wid;
       value default_value;
       title title" />
-  </div>
   <div tal:attributes="id string:${wid}_errors"></div>
 </form>
 

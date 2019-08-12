@@ -9,3 +9,6 @@
 .faceted-moreorless-widget-form input {
   width: 10em;
 }
+.faceted-moreorless-widget .widget-fieldset-legend {
+    height: 30px;
+}
