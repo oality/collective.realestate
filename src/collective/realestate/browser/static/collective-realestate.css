@@ -152,14 +152,11 @@ table>thead>tr>th {
   color: #ffffff;
   text-align: right;
   padding: 0.3em;
-  //float: right;
   font-size: 15px;
 }
 
 .tileCollectionNew div.new {
-  top: auto;
-  padding-right: 1em;
-  padding-left: 1em;
+  left: 70%;
 }
 
 .reference {
